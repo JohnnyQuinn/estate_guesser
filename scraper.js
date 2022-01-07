@@ -10,7 +10,7 @@ const puppeteer = require("puppeteer");
     await page.waitForSelector('li');
     const houses = await page.$$('.list-card-info');
 
-    for(let i = 0; i < houses.length; i++){
+    for(let i = 0; i < 5; i++){
 
         const house = houses[i];
 
