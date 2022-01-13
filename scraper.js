@@ -55,8 +55,10 @@ puppeteer.use(StealthPlugin());
 
     const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
     await page.goto(testurl);
+
     //parent element from which to start
     let parentEl = 'div.summary-container'
+    // default is desktop, switched to false when mobile version is detected 
     let desktop = true;
     
     //wait for parent seletor to load
@@ -80,15 +82,32 @@ puppeteer.use(StealthPlugin());
         return el.innerHTML;
     })
 
-    console.log(pretty(summary_container, {ocd: true}))  
-
-    // parseHomeInfo(desktop);
-   
-    await browser.close();
+    // console.log(pretty(summary_container, {ocd: true}))  
 
     // const data = fs.readFileSync('./mobile_sample.html')
 
     parseHomeInfo(desktop, summary_container)
+
+    if(desktop){
+        parentEl = '.hdp__sc-1wi9vqt-0.lWxLY.ds-media-col.media-stream'
+    } else {
+        parentEl = 'ul.media-stream'
+    }
+    
+    
+    await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
+        console.log('\n\x1b[32m%s\x1b[0m',`${parentEl} loaded`)
+    }).catch(console.error)
+
+    const photo_carousel = await page.$eval(parentEl, el => {
+        return el.innerHTML;
+    })
+
+    // console.log(pretty(photo_carousel, {ocd: true}))
+
+    parseHomePics(photo_carousel);
+
+    await browser.close();
 })();
 
 // parses and pulls data of homes based on version (desktop/mobile)
@@ -102,6 +121,7 @@ function parseHomeInfo(desktop = true, data) {
     let bath = '';
     let sq = '';
 
+    //if desktop version
     if(desktop) {
         location = $('div > div > div > div > h1').text()
 
@@ -114,6 +134,7 @@ function parseHomeInfo(desktop = true, data) {
         // TODO: still need to fix this
         sq = $('div > div > div > div > div > div > span').children().last().children().text()
     }
+    //if mobile version
     if(!desktop){
         // location = $('div').contents().next().next().children().children().contents().html() + $('div').contents().next().next().children().children().children().next().html()
         location = $('div > div').next().children().children().text() + $('div > div').next().children().children().last().text()
@@ -127,4 +148,17 @@ function parseHomeInfo(desktop = true, data) {
         sq = $('div > div > div > div > div > span').contents().last().children().html()
     }
     console.log(`\nlocation:${location}\nprice:${price}\nbed:${bed}\nbath:${bath}\nsq:${sq}`)
+}
+
+// parse and pull links for pictures based on version (desktop/mobile)
+function parseHomePics(data) {
+    const $ = cheerio.load(data)
+
+    let picsList = []
+
+    const imgEls = $('img').toArray();
+    for(i = 0; i < 7; i++){
+       picsList.push(imgEls[i]['attribs']['src']);
+    }
+    console.log(picsList)
 }
