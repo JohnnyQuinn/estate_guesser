@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
+import Game from './components/game'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}/>,
+      <Route path="/game" element={<Game />}/>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
