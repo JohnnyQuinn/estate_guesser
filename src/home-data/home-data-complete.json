@@ -1,7 +1,7 @@
 {
   "0": {
     "location": "2221 30th St NW, Washington, DC 20008",
-    "price": "$16,500,000",
+    "price": "16500000",
     "bed": "9",
     "bath": "15",
     "sq": "14,750 sqft",
@@ -17,7 +17,7 @@
   },
   "1": {
     "location": "4640 Cathedral Ave NW, Washington, DC 20016",
-    "price": "$13,750,000",
+    "price": "13750000",
     "bed": "6",
     "bath": "9",
     "sq": "8,600 sqft",
@@ -33,7 +33,7 @@
   },
   "2": {
     "location": "3122-3124 P St NW, Washington, DC 20007",
-    "price": "$13,500,000",
+    "price": "13500000",
     "bed": "5",
     "bath": "7",
     "sq": "6,300 sqft",
@@ -49,7 +49,7 @@
   },
   "3": {
     "location": "4620 Cathedral Ave NW, Washington, DC 20016",
-    "price": "$12,500,000",
+    "price": "12500000",
     "bed": "6",
     "bath": "9",
     "sq": "9,269 sqft",
@@ -65,7 +65,7 @@
   },
   "4": {
     "location": "3301 Fessenden St NW, Washington, DC 20008",
-    "price": "$11,950,000",
+    "price": "11950000",
     "bed": "11",
     "bath": "17",
     "sq": "17,631 sqft",
