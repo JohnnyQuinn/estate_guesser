@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Container, Row, Col, Carousel, Form, Button } from 'react-bootstrap';
 import HomeData from "../home-data/home-data-complete.json"
+import CurrencyInput from 'react-currency-input-field';
 
 class Game extends React.Component {
     constructor() {
@@ -11,7 +12,6 @@ class Game extends React.Component {
                 width: '576px', 
                 height: '432px'
             },
-            guessInput: '',
             guessFinal: '',
             guessDiff: 0,
             price: 0,
@@ -20,16 +20,25 @@ class Game extends React.Component {
             location: '',
             bed: '',
             bath: '',
-            sq: ''
+            sq: '',
+            // formats numbers to USD
+            formatter: new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD'
+            }),
         };
 
-        this.handleChange = this.handleChange.bind(this);
+        const asdf = 0
+
+        this.guessInputRef = React.createRef();
+
+        // this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     // sets the price variable equal to the price from homeData based on the current gamePage
     setCurrData() {
-        this.state.price = HomeData[this.state.gamePage]["price"];
+        this.state.price = Number(HomeData[this.state.gamePage]["price"]);
         this.state.homePics = HomeData[this.state.gamePage]["homePics"]
         this.state.location = HomeData[this.state.gamePage]['location']
         this.state.bed = HomeData[this.state.gamePage]['bed']
@@ -37,16 +46,13 @@ class Game extends React.Component {
         this.state.sq = HomeData[this.state.gamePage]['sq']
     }
 
-    handleChange(event) {    
-        this.setState({guessInput: event.target.value});  
-    }
-
     handleSubmit() {
-        this.state.guessFinal = Number(this.state.guessInput)
+        const guessFinal = Number(((this.guessInputRef.current.value).slice(1)).replace(/,/g, ''))
+        // this.state.guessFinal = this.state.formatter.format(Number(this.state.guessInput))
         // compares user guess with actual price
-        this.state.guessDiff = this.state.price - this.state.guessFinal
+        this.state.guessDiff = this.state.formatter.format(this.state.price - guessFinal)
         localStorage.setItem('gamePage', Number(this.state.gamePage + 1))
-        alert(`The actual price was: $${this.state.price}\nYour guess: $${this.state.guessFinal}\nThe difference is: $${this.state.guessDiff}`)
+        alert(`The actual price was: ${this.state.formatter.format(HomeData[this.state.gamePage]["price"])}\nYour guess: ${this.state.formatter.format(guessFinal)}\nThe difference is: ${this.state.guessDiff}`)
     }
 
     render() {    
@@ -100,7 +106,8 @@ class Game extends React.Component {
                                     <Form onSubmit={this.handleSubmit}>
                                         <Form.Group>
                                             <Form.Label><h3>Guess The Price!</h3></Form.Label>
-                                            <Form.Control size="lg" type="text" placeholder='$ ...' onChange={this.handleChange}></Form.Control>
+                                            {/* <Form.Control size="lg" type="text" placeholder='$ ...' onChange={this.handleChange}></Form.Control> */}
+                                            <CurrencyInput placeholder="$ ..." prefix="$" ref={this.guessInputRef}></CurrencyInput>
                                         </Form.Group>
                                         <Button variant="primary" type="submit"><strong>SUBMIT</strong></Button>
                                     </Form>
