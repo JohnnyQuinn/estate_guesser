@@ -11,7 +11,7 @@ puppeteer.use(StealthPlugin());
 
 (async () => {
     // initalize browser, headless: false means browser window opens, headless: true means without browser window 
-    const browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
+    const browser = await puppeteer.launch({ headless: false, args: [`--window-size=${1920},${1080}`]});
     const page = await browser.newPage();
     console.log('> Browser intialized\n')
 

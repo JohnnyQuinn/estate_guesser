@@ -1,0 +1,82 @@
+{
+  "0": {
+    "location": "2221 30th St NW, Washington, DC 20008",
+    "price": "$16,500,000",
+    "bed": "9",
+    "bath": "15",
+    "sq": "14,750 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/15fe821b23cdcb17a1e81b394e195524-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/917e50b9aad4a1ee3a78682424b77076-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7272e00cea85a687cf811423efc7ca06-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/073876bc9683de0364717bd8c5583432-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e018b7d13f51e9bc3a637a63aa6acda8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/82941c7b28b1ab63aa455b89c72bb0a7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0141cb35031fd82b55c7fe12f9003451-cc_ft_576.jpg"
+    ]
+  },
+  "1": {
+    "location": "4640 Cathedral Ave NW, Washington, DC 20016",
+    "price": "$13,750,000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "8,600 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/4a18219e35f18155fe8c28cf7079a293-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/08a81128d8420fc14d1457f4d2d89f8a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b05b00cea561dc093cd4a1936cf56407-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2cd95b77f568d40f32c9388092cf942b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/25c07e9767e46bc3ad42ae8427f3b846-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/281534a00852ac4ae84e9a9feee02c3d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e1af45f801ba6a55b6c36f3472b08027-cc_ft_576.jpg"
+    ]
+  },
+  "2": {
+    "location": "3122-3124 P St NW, Washington, DC 20007",
+    "price": "$13,500,000",
+    "bed": "5",
+    "bath": "7",
+    "sq": "6,300 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/3f5f12ca40638a3349cd1e61b2a41acd-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/41dcebad9cf2ac303dc841532583e833-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/68c3da97dac934f75bc4525d1ea1bb7c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/07895a4344815ff1012223aa561c6d69-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8eb0fe9d8a52bbd069b899fd7356f44d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7b4483670c198e5756eb382359be6a09-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b80d437085055de03bb2804c24b1fe7b-cc_ft_576.jpg"
+    ]
+  },
+  "3": {
+    "location": "4620 Cathedral Ave NW, Washington, DC 20016",
+    "price": "$12,500,000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "9,269 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/efa884aea06f7dbd4f4a9eea90b45e12-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/9ffdc9f94555ed2a87f1d1542718639c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fac5053888c812eaf513d713980465c0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/464582e42a02d8cf0fd02123a63271b6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f13cbe979ad041fc7d4dbb47a9a583e9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c81cfbb61c33f210a492b7cd1d9bf353-cc_ft_576.jpg",
+      ""
+    ]
+  },
+  "4": {
+    "location": "3131 Chain Bridge Rd NW, Washington, DC 20016",
+    "price": "$11,950,000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "12,200 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/bceade782135466eb468ccee3045423a-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/338e9cdbbb373d03e2046fc809e8b545-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/29da239647065680a02a6f8556b841c1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/54767d8303d62f6e4c2a9ee87b018467-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7659a5d87e52a918aee788f5369c2730-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/db2a785a507567d328985ce40a73f2be-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/83210d4ea84883dcac001fc35312ee3e-cc_ft_576.jpg"
+    ]
+  }
+}
