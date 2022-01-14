@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# EstateGuesser
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
 
-## Available Scripts
+The housing market in the United States is a peculiar thing. In California, the typical 3-bedroom home value is around $614,576 whereas in Ohio, the typical 3-bedroom home value is around $168,937 [(source)](https://www.gobankingrates.com/investing/real-estate/cost-to-own-3-bedroom-home-every-state/) (The total difference being $445,639). This difference in prices across the United States makes it challenging to be able to understand or even estimate any given home’s value. 
+Well this particular challenge, trying to estimate the most accurate home value, can be turned into a game. **Can you guess a home’s value just by knowing some of the basic info, location and looking at its pictures? That is the game of EstateGuesser.**
 
-In the project directory, you can run:
 
-### `npm start`
+### Additional Documents
+- [EstateGuesser Product Requirements Document](https://docs.google.com/document/d/17wgXHifLHZuBm5OXIiNWbkJXcdjnm-Y5sBKL0QE2cC4/edit?usp=sharing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [EstateGuesser Design Research Document](https://docs.google.com/document/d/16yGb93BbufNCHrqyJnrQaS1w5IjEtt21q8OcjfX_NEk/edit?usp=sharing)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Demo
 
-### `npm test`
+### [Heroku Live Build (master branch)](https://estate-guesser.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+input react app demo and explanation here
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Webscraper
+input webscraper demo and explanation here
