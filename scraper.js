@@ -42,7 +42,7 @@ puppeteer.use(StealthPlugin());
 
     // // //go to each page in house_href_list then retrieve and store info in JSON
     // // for(let i = 0; i < houses_href_list.length; i++){
-    // //     await page.goto(houses_href_list[i])
+    // //     await page .goto(houses_href_list[i])
     // //     await page.waitForSelector('h1')
         
     // //     const location = await page.$eval('h1.Text-c11n-8-62-4__sc-aiai24-0.bnmVPu', e => e.textContent)
@@ -65,7 +65,7 @@ puppeteer.use(StealthPlugin());
     console.log('\x1b[33m%s\x1b[0m','Attempting to load desktop version\n')
 
     await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
-        console.log('\n\x1b[32m%s\x1b[0m',`${parentEl} loaded`)
+        console.log('\n\x1b[32m%s\x1b[0m',`${parentEl} loaded`)  
     }).catch(async () => {
         console.log('\x1b[31m%s\x1b[0m','Desktop loading failed\n')
         console.log('\x1b[33m%s\x1b[0m', 'Attempting to load mobile version\n')
@@ -84,17 +84,16 @@ puppeteer.use(StealthPlugin());
 
     // console.log(pretty(summary_container, {ocd: true}))  
 
-    // const data = fs.readFileSync('./mobile_sample.html')
+    const homeData = parseHomeInfo(desktop, summary_container)
 
-    parseHomeInfo(desktop, summary_container)
-
+    // set parent element based on version
     if(desktop){
         parentEl = '.hdp__sc-1wi9vqt-0.lWxLY.ds-media-col.media-stream'
     } else {
         parentEl = 'ul.media-stream'
     }
     
-    
+    // wait for selector with imgs to load
     await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
         console.log('\n\x1b[32m%s\x1b[0m',`${parentEl} loaded`)
     }).catch(console.error)
@@ -105,7 +104,15 @@ puppeteer.use(StealthPlugin());
 
     // console.log(pretty(photo_carousel, {ocd: true}))
 
-    parseHomePics(photo_carousel);
+    const homePics = parseHomePics(photo_carousel);
+
+    homeData.homePics = homePics
+
+    // formats json data
+    let data = JSON.stringify(homeData, null, 2);
+
+    //write json data to file
+    fs.writeFileSync('home-data.json', data)
 
     await browser.close();
 })();
@@ -138,6 +145,8 @@ function parseHomeInfo(desktop = true, data) {
     if(!desktop){
         // location = $('div').contents().next().next().children().children().contents().html() + $('div').contents().next().next().children().children().children().next().html()
         location = $('div > div').next().children().children().text() + $('div > div').next().children().children().last().text()
+        // cut off irrelevant part of the string (I don't know why it does this :( )
+        location = location.slice(0, location.indexOf('For sale'))
 
         price = $('div  > div > div > div > span > span').contents().html()
 
@@ -147,10 +156,19 @@ function parseHomeInfo(desktop = true, data) {
 
         sq = $('div > div > div > div > div > span').contents().last().children().html()
     }
+
+    let homeData = {
+        location: location,
+        price: price,
+        bed: bed,
+        bath: bath,
+        sq, sq
+    }
     console.log(`\nlocation:${location}\nprice:${price}\nbed:${bed}\nbath:${bath}\nsq:${sq}`)
+    return homeData
 }
 
-// parse and pull links for pictures based on version (desktop/mobile)
+// parse and pull links for pictures 
 function parseHomePics(data) {
     const $ = cheerio.load(data)
 
@@ -161,4 +179,5 @@ function parseHomePics(data) {
        picsList.push(imgEls[i]['attribs']['src']);
     }
     console.log(picsList)
+    return picsList
 }

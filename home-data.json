@@ -1,0 +1,16 @@
+{
+  "location": "3122-3124 P St NW, Washington, DC 20007",
+  "price": "$13,500,000",
+  "bed": "5",
+  "bath": "7",
+  "sq": "6,300",
+  "homePics": [
+    "https://photos.zillowstatic.com/fp/3f5f12ca40638a3349cd1e61b2a41acd-cc_ft_960.jpg",
+    "https://photos.zillowstatic.com/fp/41dcebad9cf2ac303dc841532583e833-cc_ft_576.jpg",
+    "https://photos.zillowstatic.com/fp/68c3da97dac934f75bc4525d1ea1bb7c-cc_ft_576.jpg",
+    "https://photos.zillowstatic.com/fp/07895a4344815ff1012223aa561c6d69-cc_ft_576.jpg",
+    "https://photos.zillowstatic.com/fp/8eb0fe9d8a52bbd069b899fd7356f44d-cc_ft_576.jpg",
+    "https://photos.zillowstatic.com/fp/7b4483670c198e5756eb382359be6a09-cc_ft_576.jpg",
+    "https://photos.zillowstatic.com/fp/b80d437085055de03bb2804c24b1fe7b-cc_ft_576.jpg"
+  ]
+}
