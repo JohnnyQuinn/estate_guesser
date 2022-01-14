@@ -1,25 +1,65 @@
 import React from 'react';
-import { Card, Container, Row, Col, Carousel } from 'react-bootstrap';
+import { Card, Container, Row, Col, Carousel, Form, Button } from 'react-bootstrap';
 import HomeData from "../home-data/home-data-complete.json"
 
 function Game() {
+
+    // set first img to same size as others
+    const cardImgStyle = {
+        width: '576px', 
+        height: '432px'
+    }
+
     return (
         <div className="game">
             <Container fluid>
                 <Row>
                     <Col></Col>
-                    <Col>
-                        <Card border="primary">
+                    <Col xs={9}>
+                        <Card border="primary" >
                             <Card.Body>
-                                <Carousel>
-                                    <Carousel.Item>
-                                        <img src={HomeData[0]["homePics"][0]}/>
-                                    </Carousel.Item>
-                                </Carousel>
-                                <Card.Title>asdf</Card.Title>
-                                <Card.Text>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </Card.Text>
+                                <Container>
+                                    <Row>
+                                        <Col>
+                                            <Carousel>
+                                                <Carousel.Item>
+                                                    <img style={cardImgStyle} src={HomeData[0]["homePics"][0]}/>
+                                                </Carousel.Item>
+                                                <Carousel.Item>
+                                                    <img src={HomeData[0]["homePics"][1]}/>
+                                                </Carousel.Item>
+                                                <Carousel.Item>
+                                                    <img src={HomeData[0]["homePics"][2]}/>
+                                                </Carousel.Item>
+                                                <Carousel.Item>
+                                                    <img src={HomeData[0]["homePics"][3]}/>
+                                                </Carousel.Item>
+                                                <Carousel.Item>
+                                                    <img src={HomeData[0]["homePics"][4]}/>
+                                                </Carousel.Item>
+                                                <Carousel.Item>
+                                                    <img src={HomeData[0]["homePics"][5]}/>
+                                                </Carousel.Item>
+                                                <Carousel.Item>
+                                                    <img src={HomeData[0]["homePics"][6]}/>
+                                                </Carousel.Item>
+                                            </Carousel>
+                                        </Col>
+                                        <Col>
+                                            <Card.Title><h1>Location: </h1>{HomeData[0]['location']}</Card.Title>
+                                            <Card.Text><h2>Bed(s):</h2> {HomeData[0]['bed']} </Card.Text>
+                                            <Card.Text><h2>Bath(s):</h2> {HomeData[0]['bath']}</Card.Text>
+                                            <Card.Text><h2>Square Footage:</h2> {HomeData[0]['sq']}</Card.Text>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                                <Form>
+                                    <Form.Group>
+                                        <Form.Label><h3>Guess The Price!</h3></Form.Label>
+                                        <Form.Control size="lg" type="text" placeholder='$ ...'></Form.Control>
+                                    </Form.Group>
+                                    <Button variant="primary" type="submit"><strong>SUBMIT</strong></Button>
+                                </Form>
                             </Card.Body>
                         </Card>
                     </Col>
