@@ -46,6 +46,7 @@ puppeteer.use(StealthPlugin());
 
     //go to each page in house_href_list then retrieve and store info in JSON
     for(let i = 0; i < houses_href_list.length; i++){
+        console.log('\x1b[33m%s\x1b[0m',`> At location #${i}\n`)
         await page.goto(houses_href_list[i])
 
         // start with pulling home info (then pics)
