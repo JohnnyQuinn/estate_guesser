@@ -17,8 +17,8 @@ runScraper()
 function runScraper() {
     (async () => {
         // initalize browser, headless: false means browser window opens, headless: true means without browser window 
-        const browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
-        const page = await browser.newPage();
+        let browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
+        let page = await browser.newPage();
 
         log('> Browser intialized\n'.brightYellow)
 
@@ -54,8 +54,38 @@ function runScraper() {
 
         // go to each page in house_href_list then retrieve and store info in JSON
         for(let i = 0; i < houses_href_list.length; i++){
-            await page.goto(houses_href_list[i])
+            let robotDetected = false;
+            let referrerDetected = false; 
+
+            housePage = houses_href_list[i]
+
+            await page.goto(housePage, {waitUntil: 'networkidle2'})
             log(`> At location #${i}\n`.brightYellow)
+
+            // if captcha is detected then restart the browser instance and restart the iteration of the loop
+            await page.waitForSelector('.captcha-container', {timeout:5000}).then(() => {
+                log('Robot detected'.brightRed)
+                restartBrowser(browser, page)
+                robotDetected = true;
+            }).catch(() => {
+                log('Robot not detected'.brightGreen)
+            })
+            if(robotDetected){
+                i -= 1;
+                continue;
+            }
+            // if referrer is detected then restart the browser instance and restart the iteration of the loop
+            await page.waitForSelector('[name="referrer"]', {timeout:5000}).then(() => {
+                log('Referrer detected'.brightRed)
+                restartBrowser(browser, page)
+                referrerDetected = true;
+            }).catch(() => {
+                log('Referrer not detected'.brightGreen)
+            })
+            if(referrerDetected){
+                i -= 1;
+                continue;
+            }
 
             // start with pulling home info (then pics)
             
@@ -77,7 +107,11 @@ function runScraper() {
                 await page.waitForSelector(parentEl, {setTimeout:10000}).then(() => {
                     log(`> ${parentEl} loaded\n`.brightGreen);
                     desktop = false;
-                }).catch(console.error)
+                }).catch(async (e) => {
+                    log(e)
+                    pageHTML = await page.content()
+                    log(pretty(pageHTML, {ocd: true}))
+                })
             })           
             
             const summary_container = await page.$eval(parentEl, el => {
@@ -115,7 +149,7 @@ function runScraper() {
 
         // for testing
         // const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
-        await page.goto(testurl);
+        // await page.goto(testurl);
 
         // formats json data
         homesData = JSON.stringify(homesData, null, 2);
@@ -201,4 +235,10 @@ function parseHomePics(data) {
     }
     console.log(picsList)
     return picsList
+}
+
+async function restartBrowser(browser, page) {
+    await browser.close()
+    browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
+    page = await browser.newPage();
 }
