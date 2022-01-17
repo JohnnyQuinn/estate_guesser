@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container, Row, Col, Carousel, Form, Button, Alert} from 'react-bootstrap';
+import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
 import HomeData from "../home-data/home-data-complete.json"
 import CurrencyInput from 'react-currency-input-field';
 
@@ -10,6 +10,7 @@ class Game extends React.Component {
             guessFinal: '',
             guessDiff: 0,
             gamePage: Number(localStorage.getItem('gamePage')),
+            houseIndex: localStorage.getItem('houseIndex'), 
             // HomeData
             price: 0,
             homePics: [],
@@ -35,24 +36,34 @@ class Game extends React.Component {
             }
         };
 
-        const asdf = 0
-
         this.guessInputRef = React.createRef();
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleNext = this.handleNext.bind(this);
     }
 
-    // sets the price variable equal to the price from homeData based on the current gamePage
-    setCurrData() {
-        this.state.price = Number(HomeData[this.state.gamePage]["price"]);
-        this.state.homePics = HomeData[this.state.gamePage]["homePics"]
-        this.state.location = HomeData[this.state.gamePage]['location']
-        this.state.bed = HomeData[this.state.gamePage]['bed']
-        this.state.bath = HomeData[this.state.gamePage]['bath']
-        this.state.sq = HomeData[this.state.gamePage]['sq']
+    formatHouseIndex() { 
+        let strArr = this.state.houseIndex
+        strArr = strArr.split(',')
+        console.log(strArr)
+        for(let i=0;i<strArr.length;i++){
+            strArr[i] = (Number(strArr[i]))
+        }
+        this.state.houseIndex = strArr
     }
 
+    setCurrData() {
+        //gets random index based on length of houseIndex
+        const index = this.state.houseIndex[this.state.gamePage]
+        console.log(index)
+        this.state.price = Number(HomeData[index]["price"]);
+        this.state.homePics = HomeData[index]["homePics"]
+        this.state.location = HomeData[index]['location']
+        this.state.bed = HomeData[index]['bed']
+        this.state.bath = HomeData[index]['bath']
+        this.state.sq = HomeData[index]['sq']
+    }
+    
     handleSubmit() {
         this.state.guessFinal = Number(((this.guessInputRef.current.value).slice(1)).replace(/,/g, ''))
         // compares user guess with actual price
@@ -63,18 +74,20 @@ class Game extends React.Component {
         formDisplay: {
             display: 'none'
         }})
-        // localStorage.setItem('gamePage', Number(this.state.gamePage + 1))
-        // alert(`The actual price was: ${this.state.formatter.format(HomeData[this.state.gamePage]["price"])}\nYour guess: ${this.state.formatter.format(guessFinal)}\nThe difference is: ${this.state.guessDiff}`)
     }
 
+    // handles when the NEXT button is press
+    // NEXT button is type="submit" so it reloads the page (and when the page reloads it will be different because the gamePage value is changed)
     handleNext() {
         localStorage.setItem('gamePage', Number(this.state.gamePage + 1))
     }
 
     render() {    
+        this.formatHouseIndex()
         this.setCurrData()
-        console.log(`localStorage: ${localStorage.getItem('gamePage')}`)
+        console.log(`localStorage gamePage: ${localStorage.getItem('gamePage')}`)
         console.log(`this.state.gamePage: ${this.state.gamePage}`)
+        console.log(`this.houseIndex ${this.houseIndex}`)
         return (
             <div className="game">
                 <Container fluid>

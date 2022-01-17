@@ -5,122 +5,130 @@ const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const cheerio  = require("cheerio");
 const pretty = require('pretty');
 const fs = require('fs')
+const colors = require('colors')
+
+const log = console.log;
 
 // stealth mode for the web scraper
 puppeteer.use(StealthPlugin());
 
-(async () => {
-    // initalize browser, headless: false means browser window opens, headless: true means without browser window 
-    const browser = await puppeteer.launch({ headless: false, args: [`--window-size=${1920},${1080}`]});
-    const page = await browser.newPage();
-    console.log('> Browser intialized\n')
+runScraper()
 
-    // url for washington dc homes, price > $900k
-    const dc_url = 'https://www.zillow.com/washington-dc/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22Washington%2C%20DC%22%2C%22mapBounds%22%3A%7B%22west%22%3A-77.41626362202771%2C%22east%22%3A-76.61288837788709%2C%22south%22%3A38.677702084919346%2C%22north%22%3A39.108982541733354%7D%2C%22mapZoom%22%3A11%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A41568%2C%22regionType%22%3A6%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22price%22%3A%7B%22min%22%3A900000%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22mp%22%3A%7B%22min%22%3A3035%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%2C%22sort%22%3A%7B%22value%22%3A%22priced%22%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D'
-    console.log('\x1b[33m%s\x1b[0m','> Going to DC')
-    await page.goto(dc_url);
+function runScraper() {
+    (async () => {
+        // initalize browser, headless: false means browser window opens, headless: true means without browser window 
+        const browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
+        const page = await browser.newPage();
 
-    // wait for specific page elements
-    await page.waitForSelector('li');
-    // set houses equal to specific DOM elements 
-    const houses = await page.$$('.list-card-info');
+        log('> Browser intialized\n'.brightYellow)
 
-    //list for hyperlinks to the more detailed page for each house
-    const houses_href_list = []
-    
-    console.log('\x1b[33m%s\x1b[0m','> Pulling home listing links\n')
+        // url for washington dc homes, price > $900k
+        const dc_url = 'https://www.zillow.com/washington-dc/houses/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22Washington%2C%20DC%22%2C%22mapBounds%22%3A%7B%22west%22%3A-77.41626362202771%2C%22east%22%3A-76.61288837788709%2C%22south%22%3A38.677702084919346%2C%22north%22%3A39.108982541733354%7D%2C%22mapZoom%22%3A11%2C%22regionSelection%22%3A%5B%7B%22regionId%22%3A41568%2C%22regionType%22%3A6%7D%5D%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22price%22%3A%7B%22min%22%3A900000%7D%2C%22con%22%3A%7B%22value%22%3Afalse%7D%2C%22apa%22%3A%7B%22value%22%3Afalse%7D%2C%22mf%22%3A%7B%22value%22%3Afalse%7D%2C%22mp%22%3A%7B%22min%22%3A3035%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%2C%22sort%22%3A%7B%22value%22%3A%22priced%22%7D%2C%22land%22%3A%7B%22value%22%3Afalse%7D%2C%22tow%22%3A%7B%22value%22%3Afalse%7D%2C%22manu%22%3A%7B%22value%22%3Afalse%7D%2C%22apco%22%3A%7B%22value%22%3Afalse%7D%7D%2C%22isListVisible%22%3Atrue%7D'
+        log('> Going to DC\n'.brightYellow)
+        await page.goto(dc_url);
 
-    //go through first 5 houses and retrieve url for the more detailed page for each house
-    for(let i = 0; i < 5; i++){
+        // wait for specific page elements
+        await page.waitForSelector('li');
+        // set houses equal to specific DOM elements 
+        const houses = await page.$$('.list-card-info');
 
-        const house = houses[i];
-
-        const househref = await house.$eval('a', e => e.getAttribute('href'))
-
-        console.log(househref)
-        houses_href_list.push(househref)
-    }
-
-    //inital json data for all data for writing to home-data file
-    let homesData = {}
-
-    //go to each page in house_href_list then retrieve and store info in JSON
-    for(let i = 0; i < houses_href_list.length; i++){
-        console.log('\x1b[33m%s\x1b[0m',`> At location #${i}\n`)
-        await page.goto(houses_href_list[i])
-
-        // start with pulling home info (then pics)
+        //list for hyperlinks to the more detailed page for each house
+        const houses_href_list = []
         
-        // parent element from which to start
-        let parentEl = 'div.summary-container'
-        // default is desktop, switched to false when mobile version is detected 
-        let desktop = true;
-        
-        //wait for parent seletor to load
-        console.log('\x1b[33m%s\x1b[0m','> Attempting to load desktop version\n')
-        
-        await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
-            console.log('\n\x1b[32m%s\x1b[0m',`> ${parentEl} loaded`)  
-        }).catch(async () => {
-            console.log('\x1b[31m%s\x1b[0m','> Desktop loading failed\n')
-            console.log('\x1b[33m%s\x1b[0m', '> Attempting to load mobile version\n')
-            parentEl = '.hdp__sc-1tsvzbc-1.ds-chip'
-            await page.waitForSelector(parentEl, {setTimeout:10000}).catch(console.error).then(() => {
-                console.log('\n\x1b[32m%s\x1b[0m',`> ${parentEl} loaded\n`);
-                // for parsing the HTML 
-                desktop = false;
-            })
-        })
-        
-    
-        const summary_container = await page.$eval(parentEl, el => {
-            return el.innerHTML;
-        })
-    
-        // console.log(pretty(summary_container, {ocd: true}))  
-    
-        const homeInfo = parseHomeInfo(desktop, summary_container)
-    
-        // set parent element based on version
-        if(desktop){
-            parentEl = '.hdp__sc-1wi9vqt-0.lWxLY.ds-media-col.media-stream'
-        } else {
-            parentEl = 'ul.media-stream'
+        log('> Pulling home listing links\n'.brightYellow)
+
+        //breaking on 10 houses 
+        //go through first 10 houses and retrieve url for the more detailed page for each house
+        for(let i = 0; i < 8; i++){
+
+            const house = houses[i];
+
+            const househref = await house.$eval('a', e => e.getAttribute('href'))
+
+            log(`${i}: ${househref}`)
+            houses_href_list.push(househref)
         }
+
+        //inital json data for all data for writing to home-data file
+        let homesData = {}
+
+        // go to each page in house_href_list then retrieve and store info in JSON
+        for(let i = 0; i < houses_href_list.length; i++){
+            await page.goto(houses_href_list[i])
+            log(`> At location #${i}\n`.brightYellow)
+
+            // start with pulling home info (then pics)
+            
+            // parent element from which to start
+            let parentEl = 'div.summary-container'
+
+            // default is desktop, switched to false when mobile version is detected 
+            let desktop = true;
+            
+            //wait for parent seletor to load
+            log('> Attempting to load desktop version\n'.brightYellow)
+            
+            await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
+                log(`> ${parentEl} loaded`.brightGreen)  
+            }).catch(async () => {
+                log('> Desktop loading failed\n'.brightRed)
+                log('> Attempting to load mobile version\n'.brightYellow)
+                parentEl = '.hdp__sc-1tsvzbc-1.ds-chip'
+                await page.waitForSelector(parentEl, {setTimeout:10000}).then(() => {
+                    log(`> ${parentEl} loaded\n`.brightGreen);
+                    desktop = false;
+                }).catch(console.error)
+            })           
+            
+            const summary_container = await page.$eval(parentEl, el => {
+                return el.innerHTML;
+            })
         
-        // wait for selector with imgs to load
-        await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
-            console.log('\n\x1b[32m%s\x1b[0m',`> ${parentEl} loaded`)
-        }).catch(console.error).then()
-    
-        const photo_carousel = await page.$eval(parentEl, el => {
-            return el.innerHTML;
-        })
-    
-        // console.log(pretty(photo_carousel, {ocd: true}))
-    
-        const homePics = parseHomePics(photo_carousel);
-    
-        homeInfo.homePics = homePics
+            // console.log(pretty(summary_container, {ocd: true}))  
+        
+            const homeInfo = parseHomeInfo(desktop, summary_container)
+        
+            // set parent element based on version
+            if(desktop){
+                parentEl = '.hdp__sc-1wi9vqt-0.lWxLY.ds-media-col.media-stream'
+            } else {
+                parentEl = 'ul.media-stream'
+            }
+            
+            // wait for selector with imgs to load
+            await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
+                log(`> ${parentEl} loaded`.brightGreen)
+            }).catch(console.error).then()
+        
+            const photo_carousel = await page.$eval(parentEl, el => {
+                return el.innerHTML;
+            })
+        
+            // console.log(pretty(photo_carousel, {ocd: true}))
+        
+            const homePics = parseHomePics(photo_carousel);
+        
+            homeInfo.homePics = homePics
 
-        homesData[i] = homeInfo
-    }
+            homesData[i] = homeInfo
+        }
 
-    // for testing
-    // const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
-    // await page.goto(testurl);
+        // for testing
+        // const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
+        await page.goto(testurl);
 
-    // formats json data
-    homesData = JSON.stringify(homesData, null, 2);
-    //write json data to file
-    fs.writeFileSync('home-data.json', homesData)
+        // formats json data
+        homesData = JSON.stringify(homesData, null, 2);
+        //write json data to file
+        fs.writeFileSync('home-data.json', homesData)
 
-    await browser.close();
-})();
+        await browser.close();
+    })();
+}
 
 // parses and pulls data of homes based on version (desktop/mobile)
 function parseHomeInfo(desktop = true, data) {
-    console.log('\x1b[33m%s\x1b[0m','> Parsing for home info\n')
+    log('> Parsing for home info\n'.brightYellow)
 
     const $ = cheerio.load(data)
 
@@ -161,7 +169,7 @@ function parseHomeInfo(desktop = true, data) {
     }
 
     let homeData = {
-        location: location,
+        location: location.slice(1).replace(/,/g, ''),
         price: price,
         bed: bed,
         bath: bath,
@@ -173,7 +181,7 @@ function parseHomeInfo(desktop = true, data) {
 
 // parse and pull links for pictures 
 function parseHomePics(data) {
-    console.log('\x1b[33m%s\x1b[0m','> Parsing for home pics\n')
+    log('> Parsing for home pics\n'.brightYellow)
 
     const $ = cheerio.load(data)
 
