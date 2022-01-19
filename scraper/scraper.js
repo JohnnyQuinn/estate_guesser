@@ -9,15 +9,16 @@ const colors = require('colors')
 
 const log = console.log;
 
+let headless = true;
+
 // stealth mode for the web scraper
 puppeteer.use(StealthPlugin());
 
 runScraper()
 
-function runScraper() {
-    (async () => {
+async function runScraper() {
         // initalize browser, headless: false means browser window opens, headless: true means without browser window 
-        let browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
+        let browser = await puppeteer.launch({ headless: headless, args: [`--window-size=${1920},${1080}`]});
         let page = await browser.newPage();
 
         log('> Browser intialized\n'.brightYellow)
@@ -54,37 +55,24 @@ function runScraper() {
 
         // go to each page in house_href_list then retrieve and store info in JSON
         for(let i = 0; i < houses_href_list.length; i++){
-            let robotDetected = false;
-            let referrerDetected = false; 
-
+            // waitForBrowser(browser)
+            
             housePage = houses_href_list[i]
 
-            await page.goto(housePage, {waitUntil: 'networkidle2'})
-            log(`> At location #${i}\n`.brightYellow)
-
-            // if captcha is detected then restart the browser instance and restart the iteration of the loop
-            await page.waitForSelector('.captcha-container', {timeout:5000}).then(() => {
-                log('Robot detected'.brightRed)
-                restartBrowser(browser, page)
-                robotDetected = true;
-            }).catch(() => {
-                log('Robot not detected'.brightGreen)
-            })
+            await page.goto(housePage).catch(console.error)
+            log(`> At location[${i}]\n`.brightYellow)
+            
+            log('> scanning for bot protection\n'.brightYellow)
+            const robotDetected = await robotDetect(page);
+            // if bot protection page is detected then restart browser and go back a loop iteration 
             if(robotDetected){
-                i -= 1;
+                log('> Restarting browser instance\n'.brightYellow)
+                browser.disconnect();
+                await restartBrowser(browser)
+                i -= 1; 
                 continue;
-            }
-            // if referrer is detected then restart the browser instance and restart the iteration of the loop
-            await page.waitForSelector('[name="referrer"]', {timeout:5000}).then(() => {
-                log('Referrer detected'.brightRed)
-                restartBrowser(browser, page)
-                referrerDetected = true;
-            }).catch(() => {
-                log('Referrer not detected'.brightGreen)
-            })
-            if(referrerDetected){
-                i -= 1;
-                continue;
+            } else {
+                log('No bot protection detected\n'.brightGreen)
             }
 
             // start with pulling home info (then pics)
@@ -157,7 +145,6 @@ function runScraper() {
         fs.writeFileSync('home-data.json', homesData)
 
         await browser.close();
-    })();
 }
 
 // parses and pulls data of homes based on version (desktop/mobile)
@@ -238,7 +225,30 @@ function parseHomePics(data) {
 }
 
 async function restartBrowser(browser, page) {
-    await browser.close()
-    browser = await puppeteer.launch({ headless: true, args: [`--window-size=${1920},${1080}`]});
-    page = await browser.newPage();
+    await browser.close().catch(console.error).then(async () => {
+        browser = await puppeteer.launch({ headless: headless, args: [`--window-size=${1920},${1080}`]});
+    })
 }
+
+//detect if we page loaded was a bot protection page
+async function robotDetect(page) {
+    let robotDetected = false;
+    // if captcha is detected then restart the browser instance and restart the iteration of the loop
+    await page.waitForSelector('.captcha-container', {timeout:5000}).then(() => {
+        log('> Robot detected\n'.brightRed)
+        robotDetected = true;
+    }).catch(() => {
+        robotDetected = false;
+    })
+    // if referrer is detected then restart the browser instance and restart the iteration of the loop
+    // idk exactly what this page is but I think it's for bots 
+    // await page.waitForSelector('[name="referrer"]', {timeout:5000}).then(() => {
+    //      log('Referrer detected'.brightRed)
+    //     return true;
+    // }).catch(() => {
+    //     log('Referrer not detected'.brightGreen)
+    // })
+    return robotDetected;
+}
+
+async function waitForBrowser()
