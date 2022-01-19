@@ -48,9 +48,9 @@ async function runScraper() {
 
             const househref = await house.$eval('a', e => e.getAttribute('href'))
 
-            log(`${i}: ${househref}`)
             houses_href_list.push(househref)
         }
+        log(houses_href_list)
 
         //inital json data for all data for writing to home-data file
         let homesData = {}
@@ -70,7 +70,7 @@ async function runScraper() {
             await page.goto(housePage).catch(console.error)
             log(`> At location[${i}]\n`.brightYellow)
             
-            log('> scanning for bot protection\n'.brightYellow)
+            log('> Scanning for bot protection\n'.brightYellow)
             // if bot protection page is detected then restart browser and go back a loop iteration 
             const robotDetected = await robotDetect(page);
             if(robotDetected){
@@ -97,9 +97,10 @@ async function runScraper() {
 
             // if no bot protection and the correct page loaded then continue on with scraping for data
             homesData[i] = await scrapeHomeDetailPages(page)
+            log('--------------------------------------------------------------------------------------')
         }
         // for testing
-        // const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
+        // const testurl = 'https://www.zillow.com/homede tails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
         // await page.goto(testurl);
 
         // formats json data
@@ -108,6 +109,8 @@ async function runScraper() {
         fs.writeFileSync('home-data.json', homesData)
 
         await browser.close()
+
+        log('SUCCESS!'.rainbow)
 }
 
 // pulls home info/pics from the home detail page and returns it in JSON
@@ -123,17 +126,17 @@ async function scrapeHomeDetailPages(page) {
             log('> Attempting to load desktop version\n'.brightYellow)
             
             await page.waitForSelector(parentEl, {timeout:1000}).then(() => {
-                log(`> ${parentEl} loaded`.brightGreen)  
+                log(`> ${parentEl} loaded\n`.green.bold)  
             }).catch(async () => {
-                log('> Desktop loading failed\n'.brightRed)
+                log('> Desktop loading failed\n'.brightRed.bold)
                 log('> Attempting to load mobile version\n'.brightYellow)
                 parentEl = '.hdp__sc-1tsvzbc-1.ds-chip'
                 await page.waitForSelector(parentEl, {setTimeout:1000}).then(() => {
-                    log(`> ${parentEl} loaded\n`.brightGreen);
+                    log(`> ${parentEl} loaded\n`.green.bold);
                     desktop = false;
                 }).catch(async (e) => {
                     log(e)
-                    log('Mobile loading failed'.brightRed)
+                    log('Mobile loading failed'.brightRed.bold)
                     pageHTML = await page.content()
                     fs.writeFileSync('mobilefailed.html', pageHTML)
                     return 
@@ -157,7 +160,7 @@ async function scrapeHomeDetailPages(page) {
             
             // wait for selector with imgs to load
             await page.waitForSelector(parentEl, {timeout:1000}).then(() => {
-                log(`> ${parentEl} loaded`.brightGreen)
+                log(`> ${parentEl} loaded\n`.green.bold)
             }).catch(console.error).then()
         
             const photo_carousel = await page.$eval(parentEl, el => {
@@ -169,6 +172,8 @@ async function scrapeHomeDetailPages(page) {
             const homePics = parseHomePics(photo_carousel);
         
             homeInfo.homePics = homePics
+
+            log(homeInfo)
 
             return homeInfo
 }
@@ -217,12 +222,12 @@ function parseHomeInfo(desktop = true, data) {
 
     let homeData = {
         location: location.slice(1).replace(/,/g, ''),
-        price: price,
+        price: price.slice(1).replace(/,/g, ''),
         bed: bed,
         bath: bath,
         sq, sq
     }
-    console.log(`\nlocation:${location}\nprice:${price}\nbed:${bed}\nbath:${bath}\nsq:${sq}`)
+    // console.log(`location:${homeData['location']}\nprice:${homeData['price']}\nbed:${bed}\nbath:${bath}\nsq:${sq}\n`)
     return homeData
 }
 
@@ -246,7 +251,7 @@ function parseHomePics(data) {
         }
         picsList.push(src);
     }
-    console.log(picsList)
+    // log(picsList)
     return picsList
 }
 
@@ -255,10 +260,10 @@ async function robotDetect(page) {
     let robotDetected = false;
     // if captcha is detected 
     await page.waitForSelector('.captcha-container', {timeout:1000}).then(() => {
-        log('> Robot detected\n'.brightRed)
+        log('> Robot detected\n'.brightRed.bold)
         robotDetected = true;
     }).catch(() => {
-        log('> No bot protection detected\n'.brightGreen)
+        log('> No bot protection detected\n'.green.bold)
         robotDetected = false;
     })
     return robotDetected;
@@ -268,10 +273,10 @@ async function robotDetect(page) {
 async function checkTitleLoaded(page){
     let titleLoaded = false;
     await page.waitForSelector('title', {timeout:1000}).then(() => {
-        log('> <title> loaded\n'.brightGreen);
+        log('> <title> loaded\n'.green.bold);
         titleLoaded = true;
     }).catch(() => {
-        log('> <title> missing\n'.brightRed);
+        log('> <title> missing\n'.brightRed.bold);
         titleLoaded = false;
     })
     return titleLoaded;
