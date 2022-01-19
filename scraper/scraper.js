@@ -9,7 +9,9 @@ const colors = require('colors')
 
 const log = console.log;
 
-let headless = true;
+const headless = true;
+const args = [`--window-size=${1920},${1080}`]
+let browserRestarted = false;
 
 // stealth mode for the web scraper
 puppeteer.use(StealthPlugin());
@@ -18,7 +20,7 @@ runScraper()
 
 async function runScraper() {
         // initalize browser, headless: false means browser window opens, headless: true means without browser window 
-        let browser = await puppeteer.launch({ headless: headless, args: [`--window-size=${1920},${1080}`]});
+        let browser = await puppeteer.launch({ headless: headless, args: args});
         let page = await browser.newPage();
 
         log('> Browser intialized\n'.brightYellow)
@@ -55,27 +57,61 @@ async function runScraper() {
 
         // go to each page in house_href_list then retrieve and store info in JSON
         for(let i = 0; i < houses_href_list.length; i++){
-            // waitForBrowser(browser)
-            
             housePage = houses_href_list[i]
+
+            // gives time for browser to reintialize before continuing (if the browser was just restarted)
+            if(browserRestarted){
+                await page.waitForTimeout(1000).then(async () => {
+                    page = await browser.newPage();
+                    browserRestarted = false;
+                })
+            } 
 
             await page.goto(housePage).catch(console.error)
             log(`> At location[${i}]\n`.brightYellow)
             
             log('> scanning for bot protection\n'.brightYellow)
-            const robotDetected = await robotDetect(page);
             // if bot protection page is detected then restart browser and go back a loop iteration 
+            const robotDetected = await robotDetect(page);
             if(robotDetected){
+                //for some reason I cannot isolate this restarting browser sequence in a function thus cannot keep DRY
                 log('> Restarting browser instance\n'.brightYellow)
-                browser.disconnect();
-                await restartBrowser(browser)
+                browserRestarted = true;
+                await browser.close()
+                browser = await puppeteer.launch({ headless: headless, args: args});
                 i -= 1; 
                 continue;
-            } else {
-                log('No bot protection detected\n'.brightGreen)
             }
 
-            // start with pulling home info (then pics)
+            // sometimes the only thing that loads is an ad (I think that has something to do with the bot protection)
+            // so if the page didn't load as expected (with <title>), restart the browser and go back a loop iteration 
+            const titleLoaded = await checkTitleLoaded(page);
+            if(!titleLoaded){
+                log('> Restarting browser instance\n'.brightYellow)
+                browserRestarted = true;
+                await browser.close()
+                browser =  await puppeteer.launch({ headless: headless, args: args});
+                i -= 1; 
+                continue;
+            }
+
+            // if no bot protection and the correct page loaded then continue on with scraping for data
+            homesData[i] = await scrapeHomeDetailPages(page)
+        }
+        // for testing
+        // const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
+        // await page.goto(testurl);
+
+        // formats json data
+        homesData = JSON.stringify(homesData, null, 2);
+        //write json data to file
+        fs.writeFileSync('home-data.json', homesData)
+
+        await browser.close()
+}
+
+// pulls home info/pics from the home detail page and returns it in JSON
+async function scrapeHomeDetailPages(page) {
             
             // parent element from which to start
             let parentEl = 'div.summary-container'
@@ -86,19 +122,21 @@ async function runScraper() {
             //wait for parent seletor to load
             log('> Attempting to load desktop version\n'.brightYellow)
             
-            await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
+            await page.waitForSelector(parentEl, {timeout:1000}).then(() => {
                 log(`> ${parentEl} loaded`.brightGreen)  
             }).catch(async () => {
                 log('> Desktop loading failed\n'.brightRed)
                 log('> Attempting to load mobile version\n'.brightYellow)
                 parentEl = '.hdp__sc-1tsvzbc-1.ds-chip'
-                await page.waitForSelector(parentEl, {setTimeout:10000}).then(() => {
+                await page.waitForSelector(parentEl, {setTimeout:1000}).then(() => {
                     log(`> ${parentEl} loaded\n`.brightGreen);
                     desktop = false;
                 }).catch(async (e) => {
                     log(e)
+                    log('Mobile loading failed'.brightRed)
                     pageHTML = await page.content()
-                    log(pretty(pageHTML, {ocd: true}))
+                    fs.writeFileSync('mobilefailed.html', pageHTML)
+                    return 
                 })
             })           
             
@@ -118,7 +156,7 @@ async function runScraper() {
             }
             
             // wait for selector with imgs to load
-            await page.waitForSelector(parentEl, {timeout:10000}).then(() => {
+            await page.waitForSelector(parentEl, {timeout:1000}).then(() => {
                 log(`> ${parentEl} loaded`.brightGreen)
             }).catch(console.error).then()
         
@@ -132,19 +170,7 @@ async function runScraper() {
         
             homeInfo.homePics = homePics
 
-            homesData[i] = homeInfo
-        }
-
-        // for testing
-        // const testurl = 'https://www.zillow.com/homedetails/3122-3124-P-St-NW-Washington-DC-20007/35725211_zpid/'
-        // await page.goto(testurl);
-
-        // formats json data
-        homesData = JSON.stringify(homesData, null, 2);
-        //write json data to file
-        fs.writeFileSync('home-data.json', homesData)
-
-        await browser.close();
+            return homeInfo
 }
 
 // parses and pulls data of homes based on version (desktop/mobile)
@@ -224,31 +250,29 @@ function parseHomePics(data) {
     return picsList
 }
 
-async function restartBrowser(browser, page) {
-    await browser.close().catch(console.error).then(async () => {
-        browser = await puppeteer.launch({ headless: headless, args: [`--window-size=${1920},${1080}`]});
-    })
-}
-
 //detect if we page loaded was a bot protection page
 async function robotDetect(page) {
     let robotDetected = false;
-    // if captcha is detected then restart the browser instance and restart the iteration of the loop
-    await page.waitForSelector('.captcha-container', {timeout:5000}).then(() => {
+    // if captcha is detected 
+    await page.waitForSelector('.captcha-container', {timeout:1000}).then(() => {
         log('> Robot detected\n'.brightRed)
         robotDetected = true;
     }).catch(() => {
+        log('> No bot protection detected\n'.brightGreen)
         robotDetected = false;
     })
-    // if referrer is detected then restart the browser instance and restart the iteration of the loop
-    // idk exactly what this page is but I think it's for bots 
-    // await page.waitForSelector('[name="referrer"]', {timeout:5000}).then(() => {
-    //      log('Referrer detected'.brightRed)
-    //     return true;
-    // }).catch(() => {
-    //     log('Referrer not detected'.brightGreen)
-    // })
     return robotDetected;
 }
 
-async function waitForBrowser()
+// checks if page has title tag, otherwise its properly the wrong page
+async function checkTitleLoaded(page){
+    let titleLoaded = false;
+    await page.waitForSelector('title', {timeout:1000}).then(() => {
+        log('> <title> loaded\n'.brightGreen);
+        titleLoaded = true;
+    }).catch(() => {
+        log('> <title> missing\n'.brightRed);
+        titleLoaded = false;
+    })
+    return titleLoaded;
+}
