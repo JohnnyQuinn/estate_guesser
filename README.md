@@ -12,7 +12,7 @@ Well this particular challenge, trying to estimate the most accurate home value,
 ![EstateGuesser demo gif](./imgs/estate_guesser_demo_gif.gif)
 
 # Webscraper
-![EstateGuesser Webscraper demo gif](./imgs/estateguesser_scraper_demo_gif.gif)
+![EstateGuesser Webscraper demo gif](./imgs/EstateGuesser_Scraper_Demo.gif)
 
 ### Additional Documents
 - [EstateGuesser Product Requirements Document](https://docs.google.com/document/d/17wgXHifLHZuBm5OXIiNWbkJXcdjnm-Y5sBKL0QE2cC4/edit?usp=sharing)
