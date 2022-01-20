@@ -16,13 +16,83 @@ let browserRestarted = false;
 // stealth mode for the web scraper
 puppeteer.use(StealthPlugin());
 
-runScraper()
+// runScraper()
+
+test()
+
+async function test() {
+    let browser = await puppeteer.launch({ headless: true, args: args});
+    let page = await browser.newPage();
+    log('> Browser intialized\n'.brightYellow)
+
+    const cities = [
+        'san-francisco-ca',
+        'washington-dc',
+        'miami-fl',
+        'austin-tx',
+        'kansas-city-mo',
+        'houston-tx',
+        'phoenix-az',
+        'fort-worth-tx',
+        'los-angeles-ca',
+        'portland-or'
+    ]
+
+    const cityURLs = []
+
+    for(let i=0;i<cities.length;i++) {
+        const url = 'https://www.zillow.com/' + cities[i] + '/houses/'
+        log(`> Going to ${cities[i]}\n`.brightYellow)
+
+        if(browserRestarted){
+            await page.waitForTimeout(1000).then(async () => {
+                page = await browser.newPage();
+                browserRestarted = false;
+            })
+        } 
+
+        await page.goto(url)
+
+        log('> Scanning for bot protection\n'.brightYellow)
+        const robotDetected = await robotDetect(page);
+        if(robotDetected){
+            //for some reason I cannot isolate this restarting browser sequence in a function thus cannot keep DRY
+            log('> Restarting browser instance\n'.brightYellow)
+            browserRestarted = true;
+            await browser.close()
+            browser = await puppeteer.launch({ headless: headless, args: args});
+            i -= 1; 
+            continue;
+        }
+
+        await page.waitForSelector('#sort-popover').then(async () => {
+            log('> #sort-popover loaded'.green)
+            await page.click('#sort-popover').then(() => {
+                log('> #sort-popover clicked'.green)
+            }).catch(console.error)
+        }).catch(console.error)
+    
+        await page.waitForSelector('[data-value="priced"]').then(async () => {
+            log('> [data-value=priced] loaded'.green)
+            await page.click('[data-value="priced"]').then(() => {
+                log('> [data-value="priced"]'.green)
+            }).catch(console.error)
+        })
+
+        const cityURL = await page.url()
+
+        cityURLs.push(cityURL)
+    }
+
+    log(cityURLs)
+
+    await browser.close()
+}
 
 async function runScraper() {
         // initalize browser, headless: false means browser window opens, headless: true means without browser window 
         let browser = await puppeteer.launch({ headless: headless, args: args});
         let page = await browser.newPage();
-
         log('> Browser intialized\n'.brightYellow)
 
         // url for washington dc homes, price > $900k
@@ -40,8 +110,8 @@ async function runScraper() {
         
         log('> Pulling home listing links\n'.brightYellow)
 
-        //breaking on 10 houses 
-        //go through first 10 houses and retrieve url for the more detailed page for each house
+        //breaking on 10 houses, JS doesnt load for the element unless scrolled down to 
+        //go through first 8 houses and retrieve url for the more detailed page for each house
         for(let i = 0; i < 8; i++){
 
             const house = houses[i];
