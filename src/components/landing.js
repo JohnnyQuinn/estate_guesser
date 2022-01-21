@@ -1,20 +1,19 @@
-import React from "react";
+import {Component} from "react";
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 // import "./Landing.css"
 
-class Landing extends React.Component { 
+class Landing extends Component { 
     constructor() {
         super()
         this.state = {
             /* when user loads up landing page, the gamePage is set to 0 
                so the game is reset to the beginning
             */
-            gamePage: 1, 
+            gamePage: 0, 
             houseIndex: [],
         }
     }
-
     shuffleHouseIndex() {
         this.state.houseIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         let array = this.state.houseIndex

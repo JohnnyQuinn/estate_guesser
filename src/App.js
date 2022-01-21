@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Route, Router} from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Landing from './components/landing'; 
+import Game from './components/game';
 
 function App() {
   return (
     <div className="App">
-      <Landing />
+        <Routes>
+          <Route exact path="/" element={<Landing />}/>
+          <Route path="/game" element={<Game />}/>
+        </Routes>
     </div>
   );
 }
