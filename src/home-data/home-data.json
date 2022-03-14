@@ -1,0 +1,1282 @@
+{
+  "0": {
+    "location": "950 Pacific Ave San Francisco CA 94115",
+    "price": "29500000",
+    "bed": "8",
+    "bath": "13",
+    "sq": "20,000 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/f4791a0337ae10aec7701d868b1de8f3-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/7580652859d4a0dbc1fb48394a43cd61-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1cb0058080371515dc0bf197893a3d48-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5b5587ff767a234942e5e4dce44778ad-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/dde54c569d0e31df54a6db31d5e3d853-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/6a0be1ee860354baea7e45b90151d308-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/46128284a11a80d900c48297193c23fc-cc_ft_576.jpg"
+    ]
+  },
+  "1": {
+    "location": "828 Vallejo St San Francisco CA 9412",
+    "price": "28000000",
+    "bed": "8",
+    "bath": "9",
+    "sq": "10,345",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a88e60401103428b7c7a1617f6b21a90-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/b1469252018ca4a40a5bef2b5ccb1bd7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e051aff0b0988d0c160f61d7c45c57ff-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5a986e703ea12e6f0a32d6c0b217074b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e6a9a2abc5541119143e6f011e88aeca-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a71b52d84030d9c59230e0c57853e923-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e61d85b66ad3692e94c5ba1030ff09ee-cc_ft_576.jpg"
+    ]
+  },
+  "2": {
+    "location": "698 Pacific Ave San Francisco CA 9411",
+    "price": "25800000",
+    "bed": "8",
+    "bath": "8",
+    "sq": "10,734",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/c0a07aa64c99b159fa5ce110ffbb2780-cc_ft_960.jpg",
+      "https://my.matterport.com/api/v2/player/models/VbLZRN9U3hC/thumb",
+      "https://photos.zillowstatic.com/fp/94cbef3ee0fd0c440684b58a6e3b5731-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/624443cfdc666300a6255762beaf200c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d624a2294506994a50c37832cae6ee1a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/128c85fd6da87abde23a888dbb436cd3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/41eb04d387644370b0d15d4f3746b9f9-cc_ft_576.jpg"
+    ]
+  },
+  "3": {
+    "location": "266 Washington St San Francisco CA 9410",
+    "price": "17000000",
+    "bed": "5",
+    "bath": "5",
+    "sq": "--",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/ef9488385858feb73a782330f3a49d10-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/3cde02e7fdf2d3df0a7ea82c42ea9064-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1cf42bdb26bc5e36d0de15f05f9ee4eb-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/013975a302daee4b3bcb3f250b18c572-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/14e82ebb47c95af9cc7e3ebe3dcfa540-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/918073dd113816e3e3cbf8139e471cc3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/61ca9eb299c5169514d4b5192d6a1017-cc_ft_576.jpg"
+    ]
+  },
+  "4": {
+    "location": "500 Broadway St San Francisco CA 9411",
+    "price": "17000000",
+    "bed": "6",
+    "bath": "7",
+    "sq": "7,045",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/dbd320f228a382fcdd5db7a7cc988d6e-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/066bf3d9687fb32432383f421b97ee62-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/723475e7204cc9363d56490d3f91f02c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5591ab36e0acaf752fc798946cc8c0dd-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/41e16b485ad5867e3e7306eb31c1d8c6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5c3470f548fdeac59fd3d8adbe147c7b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d0a54aaa542768594b02dbe40c67aa11-cc_ft_576.jpg"
+    ]
+  },
+  "5": {
+    "location": "839 Pacific Ave San Francisco CA 9411",
+    "price": "16950000",
+    "bed": "5",
+    "bath": "6",
+    "sq": "8,650",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/8fa05431983f0e66803b4e3bdfa5fc0b-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/bdf2d97a6226dc696a9439e86e706b6e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/375943c422d769f446f056b1a2937a8b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9ee4ff549536722c55ce9a6218822744-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b044882a49c52d01ef8a468410401575-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/23aa515dbca5c0e8ed49410aa43fe479-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/bb9bba7f2fd25d1c2c3749137d0c9228-cc_ft_576.jpg"
+    ]
+  },
+  "6": {
+    "location": "24 Sea Cliff Ave San Francisco CA 9412",
+    "price": "15375000",
+    "bed": "6",
+    "bath": "7",
+    "sq": "7,170",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/3b64276dcae34b8a61f92b7c5f3d819d-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/89ece29af35455d30f5462937e1d1ed6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/97dc9d47cef4b8afe07049777250eab3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f16093039b64c5f5f4884842d665d4b1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f847d0d44828cae4baae162e217e1d56-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9209adc1888a9415522c4e6f8778566b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2527f14afe13d43bf2848d6f89d8a407-cc_ft_576.jpg"
+    ]
+  },
+  "7": {
+    "location": "5 Buena Vista Ter San Francisco CA 9411",
+    "price": "11950000",
+    "bed": "5",
+    "bath": "5",
+    "sq": "7,138",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/5cb799d559371c8d6bd3432f4abd550a-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/9e838a86bd71cc0ba72c6350a3b99958-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2ac50e919d27c538b3eaa63eb1d677d9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/54ed1d54b3bd1c46e00008be6d01f826-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/094c900dd0eb9046473bcd4c2486f9c8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1a5be7b0519bcd5908b7290350fc7d2e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f0bbe086eb258a8250bee171341d3fb3-cc_ft_576.jpg"
+    ]
+  },
+  "8": {
+    "location": "221 30th St NW Washington DC 2000",
+    "price": "16500000",
+    "bed": "9",
+    "bath": "15",
+    "sq": "14,750",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/15fe821b23cdcb17a1e81b394e195524-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/917e50b9aad4a1ee3a78682424b77076-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7272e00cea85a687cf811423efc7ca06-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/073876bc9683de0364717bd8c5583432-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e018b7d13f51e9bc3a637a63aa6acda8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/82941c7b28b1ab63aa455b89c72bb0a7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0141cb35031fd82b55c7fe12f9003451-cc_ft_576.jpg"
+    ]
+  },
+  "9": {
+    "location": "640 Cathedral Ave NW Washington DC 20016",
+    "price": "13750000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "8,600",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/4a18219e35f18155fe8c28cf7079a293-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/08a81128d8420fc14d1457f4d2d89f8a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b05b00cea561dc093cd4a1936cf56407-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2cd95b77f568d40f32c9388092cf942b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/25c07e9767e46bc3ad42ae8427f3b846-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/281534a00852ac4ae84e9a9feee02c3d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e1af45f801ba6a55b6c36f3472b08027-cc_ft_576.jpg"
+    ]
+  },
+  "10": {
+    "location": "122-3124 P St NW Washington DC 20007",
+    "price": "13500000",
+    "bed": "5",
+    "bath": "7",
+    "sq": "6,300 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/3f5f12ca40638a3349cd1e61b2a41acd-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/41dcebad9cf2ac303dc841532583e833-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/68c3da97dac934f75bc4525d1ea1bb7c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/07895a4344815ff1012223aa561c6d69-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8eb0fe9d8a52bbd069b899fd7356f44d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7b4483670c198e5756eb382359be6a09-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b80d437085055de03bb2804c24b1fe7b-cc_ft_576.jpg"
+    ]
+  },
+  "11": {
+    "location": "620 Cathedral Ave NW Washington DC 20016",
+    "price": "12500000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "9,269 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/efa884aea06f7dbd4f4a9eea90b45e12-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/9ffdc9f94555ed2a87f1d1542718639c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fac5053888c812eaf513d713980465c0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/464582e42a02d8cf0fd02123a63271b6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f13cbe979ad041fc7d4dbb47a9a583e9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c81cfbb61c33f210a492b7cd1d9bf353-cc_ft_576.jpg",
+      ""
+    ]
+  },
+  "12": {
+    "location": "131 Chain Bridge Rd NW Washington DC 20016",
+    "price": "11950000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "12,200 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/bceade782135466eb468ccee3045423a-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/338e9cdbbb373d03e2046fc809e8b545-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/29da239647065680a02a6f8556b841c1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/54767d8303d62f6e4c2a9ee87b018467-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7659a5d87e52a918aee788f5369c2730-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/db2a785a507567d328985ce40a73f2be-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/83210d4ea84883dcac001fc35312ee3e-cc_ft_576.jpg"
+    ]
+  },
+  "13": {
+    "location": "301 Fessenden St NW Washington DC 20008",
+    "price": "11950000",
+    "bed": "11",
+    "bath": "17",
+    "sq": "17,631 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/16748432c1d3db88ff4180c0408c4e98-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/f961ff94d9a2a86922303118325dd535-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/af8aa0b8d0d142a1a60b947f36991476-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7c46492d7a9986d2b1827d82873a5fa5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e8c65ab1011c4d03bfc359d5977e112b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1367218ad3d99f39798b726fe85abcbd-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ddb010f8edc1fddf23edde6e881e3ff3-cc_ft_576.jpg"
+    ]
+  },
+  "14": {
+    "location": "860 Woodland Dr NW Washington DC 20008",
+    "price": "10995000",
+    "bed": "5",
+    "bath": "8",
+    "sq": "8,500 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/63e9e09a5ef0bb315e1bf350cd5e3265-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/7c74ad7268f8d4fb9fe94d10b6213732-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/09ffbbed826e61de1b2b6dcba96c347e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b4fed82c37d16698e9c9da8eccd48992-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/734ffab3f486ea83d1a7f795928f899a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c866fdb2437cb249b6c6f0f56614817c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f279012c98c83d08a39946bcaed9afa1-cc_ft_576.jpg"
+    ]
+  },
+  "15": {
+    "location": "701 32nd St NW Washington DC 2000",
+    "price": "9750000",
+    "bed": "5",
+    "bath": "6",
+    "sq": "5,230",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/05639dd8179e1c8605a63c48555e9d13-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/540063b38c87f85416fdcde50eec4c52-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/38bdd0f67688425daa74d416805fb754-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/89679c424a034f08d2fab7b9ecdb5929-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/bb9dd69de69fc09a15d3102a0c18c6d5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/69f4094d4a160685e027a3ea99a886bb-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b546a9fcae12d7ca898e65dd783bcb2c-cc_ft_576.jpg"
+    ]
+  },
+  "16": {
+    "location": "Undisclosed Address) Miami FL 33133",
+    "price": "29500000",
+    "bed": "7",
+    "bath": "10",
+    "sq": "14,193 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/b58e14b37dc823935251a51e35d4a1fb-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/2b167542a29a1c7b1a1f9869a2956852-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d5122f657c59a8235b452907f95fc816-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7dc0246a83a01f3cb9909cc90abfa296-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3b60d7cee2fc7f776154913d7b46a50b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fa1e70e8e09b56d0c0abc04e382751fa-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/835c86c8393a92f9c20fa02fa05c5bb9-cc_ft_576.jpg"
+    ]
+  },
+  "17": {
+    "location": "061 N Venetian Dr Miami Beach FL 33139",
+    "price": "27000000",
+    "bed": "7",
+    "bath": "8",
+    "sq": "-- sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/c62ddfaf39182c43f6b5e2e98075acd6-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/da8f13c5853e1572966b5d98dad110cd-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2c347f6ba5170f8d9c8ede0a8086670e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1d9e6b33cb5344bcee182eb415eb0ca9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/00c8de39c41e037cc0c6778199173f99-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/64714b7da78f3690d9be6073b9a9eaf1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/664797ff4902a515c4ca1578c2223e2b-cc_ft_576.jpg"
+    ]
+  },
+  "18": {
+    "location": "369 N Venetian Way Miami Beach FL 3313",
+    "price": "21900000",
+    "bed": "6",
+    "bath": "7",
+    "sq": "--",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/4e08180363d127d74593414fd1d4b1e5-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/22781f6fe145d5b86bf0d5998359a191-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c3ff16eaba181c9ccfeb0ed62375171a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ff9cc83bcab8ce8aa551a3f28b213002-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7e2d32154e3b32338d5c5f17543ded62-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/294bc36924225611fec3d86bcb8c783c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ac0a7fac85dd4fb70b7bc103d1abfd96-cc_ft_576.jpg"
+    ]
+  },
+  "19": {
+    "location": "201 N Venetian Way Miami Beach FL 3313",
+    "price": "20120000",
+    "bed": "4",
+    "bath": "6",
+    "sq": "8,632",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/4753ec341cc9d4361dfca5acacda9b44-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/74f80b7227f9b9cdae0095347d6a801e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/de40ce3a901ca4feb81700aef64553b8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8aaa3394b8f87214f7608d03b0708f8f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/68de7de9081a5dc3bf04b16ad779d96e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5a07ce8921bb6e0b20cbc3223fee41e3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/077cbbe7beaddc352e2fed3ecafb36d9-cc_ft_576.jpg"
+    ]
+  },
+  "20": {
+    "location": "301 Belle Meade Island Dr Miami FL 33138",
+    "price": "19500000",
+    "bed": "11",
+    "bath": "11",
+    "sq": "7,664 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/e10f0c4744636ec4b6ebdc20d0fbfc2c-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/4f66b7d03f67da671ca40adf5bd25eb6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/46b22a60849663a0638c7532a7cd899d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/73a865929d1eedc9d5e5294ed0038d98-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/926586fa8bda4c79264760f0ec1c1209-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/604c2600d5f1320b1bacee638c73d8f7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7d5a1f13b95a77275e7bb2b0da486679-cc_ft_576.jpg"
+    ]
+  },
+  "21": {
+    "location": "740 SW 80th St Miami FL 3314",
+    "price": "15995000",
+    "bed": "7",
+    "bath": "10",
+    "sq": "8,732",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/e2577d44297ec51ef908bc37058e2f81-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/b0ac7b31c0797d4ae6317204e842dcf2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/92ec7eae59fd7946fe92a3c75c4bcc7a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/03745893d1c8d7f7c0b8bdd13bb5631c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ea3c03fb68e9fb2075d98a3a72f10419-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/bb9c0f3ddab78dd7c83d6256e56b9ff4-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/194948e9b1cc5b678cc877f6da9f87a4-cc_ft_576.jpg"
+    ]
+  },
+  "22": {
+    "location": "241 Palm Ln Miami FL 3313",
+    "price": "15500000",
+    "bed": "6",
+    "bath": "6",
+    "sq": "6,334",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/ffbc2996803ab9cbb00ca21cbbfe4a2c-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/65d0921c7de638f85e8cca7ab1a6e4ad-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9dbb5997713763215c9129d462d3bb83-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/eed637cbdd3c83fac2c56c94b11411dc-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8d527c561e7bfd81cb1b6378d7bb4a7d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5e8b4867ce56b05c2c61615e0a8585a7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/27ea0d047305bc86f6e63d76c1f1b28a-cc_ft_576.jpg"
+    ]
+  },
+  "23": {
+    "location": "379 N Venetian Way Miami Beach FL 3313",
+    "price": "15400000",
+    "bed": "5",
+    "bath": "5",
+    "sq": "5,837",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/1906ccf9f0b70d1e76332a97a90417e3-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/0801bd9daf3d66d48bd2481134028a5d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e301d7602bfba4dff1e5ceefdee5063e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c26791ed0ec6665def3ae7ddae362e83-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ec8005742d61e45e28a9b0dc03bfb868-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8ecb28890cc8b1020c4a11dc720a7122-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a906aaa3cce66322539f029b6b3cc8c1-cc_ft_576.jpg"
+    ]
+  },
+  "24": {
+    "location": "416 N Fm 973 Austin TX 78724",
+    "price": "18000000",
+    "bed": "5",
+    "bath": "5",
+    "sq": "6,750 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a53d5dfbd1b74fc4b7d9856adb491eb1-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/2183df6b963a350508cbf966b87bd8f1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2e334cbe16829f9d1c013bc76759eb39-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a3a8d2ea9422389e26546336177c66b5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3457fc495f6ba7daef663e8892ad985a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c14cca7fcbfb96d76c341ed484526b97-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0a73f1eff28f97cb866556151d76f54a-cc_ft_576.jpg"
+    ]
+  },
+  "25": {
+    "location": "621 Spicewood Springs Rd Austin TX 78759ActiveEst. payment: $82152/moGet pre-qualifi",
+    "price": "15000000",
+    "bed": "--",
+    "bath": null,
+    "sq": "--",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/4dd454efbcd24dc31af801a063eabacf-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/c7d2a70210c7a67a19e76b617e85983d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b4222e1bccf96b956874400cdf3d37e2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3f7d26249d09fcd278484b623eee3708-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fa4816c6fd21072f92dca33d88300d4b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8e92a541e25c988ae139991bc09cefdd-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/34363771ce4703db97d9d5faf9da7b91-cc_ft_576.jpg"
+    ]
+  },
+  "26": {
+    "location": "901 Escala Dr Austin TX 78735",
+    "price": "9900000",
+    "bed": "7",
+    "bath": "11",
+    "sq": "15,266 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/196106c30558650f7f5bb31e6a9a56e7-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/dffe9bead0fa293b810a27db61ffee76-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0ee5ed79464aa8a580c1f7051a745c0f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fc00ddc668ccf701d46349c1257e11c9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d5e035fc227c11549b2cf31596484b61-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5820a905ebf942111c36ef469b05185f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/28ef5d3219d6a9d7c978276e7f2635b4-cc_ft_576.jpg"
+    ]
+  },
+  "27": {
+    "location": "705 Island Ledge Cv Austin TX 78746ActiveZestimate®: $9401100Est. payment: $46970/moGet pre-qualifi",
+    "price": "8500000",
+    "bed": "7",
+    "bath": "7",
+    "sq": "10,818",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/714290eb4148b2004fb457c446b5395d-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/d488ee7808ad13c1738cdfa404baab58-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/09660a1f9b8fdee74d05ed256d4ee4df-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e74266a75b37520c9ac51e11f2f2dcdc-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b9366e6d1cfb8ec1bab2de45d879a2b1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/769f1da225b6f3bcfe3619fda76b8719-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0726d9e53f04af328c4b48c68feb56ed-cc_ft_576.jpg"
+    ]
+  },
+  "28": {
+    "location": "Undisclosed Address) Austin TX 78701",
+    "price": "7750000",
+    "bed": "6",
+    "bath": "5",
+    "sq": "5,870 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/3df0e374da0e27ee5cf2b450c1ee6ce3-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/525b1fbb7ced52049a8968414cb024b2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/036fdd8553f7794f0855fb64b9d8b4ee-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a9c433d09329b7c0a2bf4225a5220f46-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/665e964c989bf11661b09e1c3cb49fa0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/52f30177c80eefb1bca05508e4e578f1-cc_ft_576.jpg",
+      ""
+    ]
+  },
+  "29": {
+    "location": "511 Island Cv Austin TX 78731ActiveEst. payment: $41476/moGet pre-qualifi",
+    "price": "7500000",
+    "bed": "5",
+    "bath": "6",
+    "sq": "7,755",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/2ad133196ee98a601c3ccb0077626cc8-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/0d18e54defcf878cc9e4674da648d22b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7052b21b2407ccc8a444b1ab26435bd2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/76937961350da157f7394bfb5a251ea5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c2f5ebdb534be91a9ed2443e97dad428-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/425012cbd1081b2954f28a02d374d009-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a5a20e64ee414393b88385def7052bf0-cc_ft_576.jpg"
+    ]
+  },
+  "30": {
+    "location": "0107 Davy Crockett Dr Austin TX 78737ActiveEst. payment: $37137/moGet pre-qualifi",
+    "price": "6750000",
+    "bed": "--",
+    "bath": null,
+    "sq": "--",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/5b7fa970c6d72f1c69b459f68ceec83f-cc_ft_960.jpg",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "31": {
+    "location": "402 Ethridge Ave Austin TX 78703ActiveEst. payment: $29575/moGet pre-qualifi",
+    "price": "5400000",
+    "bed": "5",
+    "bath": "7",
+    "sq": "5,997",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/370c20bb699cc74fce197a0d79639398-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/24c6d39efdb33673a3fbde92e252ff07-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/dcc1c3c5bbda87294cf6a8752435b2f9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1a482340971963889ef637082269b9b1-cc_ft_576.jpg",
+      "",
+      "",
+      ""
+    ]
+  },
+  "32": {
+    "location": "201 NW 76th St Kansas City MO 64151ActiveZestimate®: $4333400Est. payment: $21860/moGet pre-qualifi",
+    "price": "4500000",
+    "bed": "6",
+    "bath": "8",
+    "sq": "9,678",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/638451956ae807d5c82514541c7c834a-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/322d9e8c80dea860c7d9665a2f1e420d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/833efc37b8a5dda529311e8a958101a0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e5ed1f71252d1bd6b919040b3b33a3f7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5fb140b703fb84d284e99d7a9573eaad-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7cb1b3f36259ca02cea7d352350ef304-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1bc568dc66bb1f301ab0ee01c404cfae-cc_ft_576.jpg"
+    ]
+  },
+  "33": {
+    "location": "550 Ward Pkwy Kansas City MO 64113ActiveZestimate®: $3789000Est. payment: $19731/moGet pre-qualifi",
+    "price": "4000000",
+    "bed": "6",
+    "bath": "8",
+    "sq": "14,084",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/08af7ae3d89e7e5850ebda6a0b509d71-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/5a5b19edadc5ddf50e492e94e156d262-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1091749c5ad5f2c6c4da37cc9479579e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3be34e264f50e020e72ac6aec7c814b4-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e6fbda93162a4d6dc2ddf695bccc1bc7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e89380c3dd72d98a74a6a8f137782db5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f12c4387d1b149f53e1de47045bf0f95-cc_ft_576.jpg"
+    ]
+  },
+  "34": {
+    "location": "008 Valentine Rd Kansas City MO 64111ActiveZestimate®: $3286200Est. payment: $16651/moGet pre-qualifi",
+    "price": "3375000",
+    "bed": "5",
+    "bath": "5",
+    "sq": "17,572",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/2deddf5e1ce2e1d0a3d8e37f0295d71f-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/099ed75714263927f35d8054dacd4a66-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cf89f8c4c36416b01108a2e3eefb4c80-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9657d7600dffcd234ca25296b083448e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/49cf5e34f30fcd981743c1267535dc60-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/58253a336177dbd018453de8e1ca12e9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7282b1b6f6662a71c50329dc8768aa8e-cc_ft_576.jpg"
+    ]
+  },
+  "35": {
+    "location": "11 Ward Pkwy Kansas City MO 64112",
+    "price": "2450000",
+    "bed": "4",
+    "bath": "7",
+    "sq": "7,722 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/7082d05af4f37bd5c13bb681145b276f-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/8762207c1c745d747f2576e292d68710-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b31d6a0ce2fb6cab92ca3b6475b06d8e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f5ecec5ea52d42c7c0279f8f3d72fcc4-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cc584bccdf38d319877553adf2cfa259-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cf528cb59ddb5be74631836a786a26db-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/772796e2fe706eaa371cf44fc60da9f1-cc_ft_576.jpg"
+    ]
+  },
+  "36": {
+    "location": "935 Central St Kansas City MO 64112ActiveZestimate®: $2176300Est. payment: $12822/moGet pre-qualifi",
+    "price": "2295000",
+    "bed": "4",
+    "bath": "4",
+    "sq": "5,676",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/45c50338aab88ab7db3a27a1c4ca5cac-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/0def33771a7b330698afd14a89d0d248-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c2738c874be53e6234adb7ab86be6113-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/74e36f69f66834cb6e3e61fdf3c63251-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ba911a5a71f000886dd5cc7a63c579b8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7aba8470a6ab8f75acf71c772acfcf40-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/23693b10d5a3ab7f072a667d75d914a8-cc_ft_576.jpg"
+    ]
+  },
+  "37": {
+    "location": "943 Ward Pkwy Kansas City MO 64112",
+    "price": "1950000",
+    "bed": "4",
+    "bath": "8",
+    "sq": "7,263 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/273d1aa66c20f9bd6b731268f0a964f2-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/1a5b6f33bd2284ba475f6f79653258d6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8244dcba3c8630024a12812f9e361e9c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f8ddcb14b6bfc34813302ae349a5b7a8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/84889debd5f2b05e6c05e0339556a74d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0166570ceb5b8b7bd53b4bf7ef9b7195-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/440e8ee91306786bb6a2c513461c8389-cc_ft_576.jpg"
+    ]
+  },
+  "38": {
+    "location": "05 W Red Bridge Rd Kansas City MO 64114ActiveZestimate®: $1850000Est. payment: $9126/moGet pre-qualifi",
+    "price": "1850000",
+    "bed": "3",
+    "bath": "4",
+    "sq": "5,120",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/d09903b630fc8de0bcaa88a9ff389a98-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/c64310e6e1f3902fe08c66460eb19361-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/dd5cc49274b664d4ecfd0faa4210f231-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/38ba3474c414c331e31314e6b2681d61-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9e8bfef17faa998c4489a6b1afc46f55-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/491edc8bc879895b98d8b5151450a5ce-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9498b6e30b893cbd015f22e7d8fa7f9d-cc_ft_576.jpg"
+    ]
+  },
+  "39": {
+    "location": "743 N Revere Ave Kansas City MO 64151ActiveZestimate®: None HelpHelpEst. payment: $8551/moGet pre-qualifi",
+    "price": "1750000",
+    "bed": "4",
+    "bath": "5",
+    "sq": "4,187",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/9aef1fc9572eac0d70743eb77276e33a-cc_ft_960.jpg",
+      "https://www.zillowstatic.com/static-sphere-viewer/LIVE/images/nophoto_h_g.png",
+      "https://www.zillowstatic.com/static-sphere-viewer/LIVE/images/pan-helper@2x.png",
+      "https://www.zillowstatic.com/static-sphere-viewer/LIVE/images/click-to-explore-helper@2x.png",
+      "https://www.zillowstatic.com/static-sphere-viewer/LIVE/images/arrow-helper@2x.png",
+      "https://photos.zillowstatic.com/fp/7c56d515a2883e523361338002f39e7c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4affd53f710232c309751f0ce6f399d7-cc_ft_576.jpg"
+    ]
+  },
+  "40": {
+    "location": "20 Carnarvon Dr Houston TX 77024",
+    "price": "29500000",
+    "bed": "6",
+    "bath": "16",
+    "sq": "26,638 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/6b7bf3e4c2f8fffd20259bdd924a8681-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/b5da9ec5903bedf9bd0eed0b86bf5533-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5a6c7f1c6d397db3dfaf7375fac02ade-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3f33343d97e349745637f03e8e70e1e8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a72a62943030a94d712c61de8505c800-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/42c1a687e9f1993ad4fcf56122b3e152-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e49f137995ae513f469083ba1a776d88-cc_ft_576.jpg"
+    ]
+  },
+  "41": {
+    "location": "920 Lazy Lane Blvd Houston TX 7701",
+    "price": "29500000",
+    "bed": "5",
+    "bath": "10",
+    "sq": "17,405",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/e06dd4677b752d298e94e48189c70282-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/712095eddbf693183886394edb9eca85-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c5de1dd1f42175102820c3158573a389-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/adf906d50a69567a13131c26cb88c788-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b56d1ef50fdfad177fb90c359720d0d2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b2dcc8bae6e9a1f0735f74a9918bcae5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/78a2f3006f0034347f352a4f041cb4ae-cc_ft_576.jpg"
+    ]
+  },
+  "42": {
+    "location": "000 Kirby Dr Houston TX 77019",
+    "price": "17995000",
+    "bed": "10",
+    "bath": "15",
+    "sq": "22,880 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/7fad1c29266e9259c41701dc7f966db3-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/4b0568d35bf9d6130a68ccfc534c807d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e02cf33f353b7b88251b5d3cb0025a80-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3f8fbb8f86904a9faa5c0c1113060a97-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/6c82d30bc91019550fc8074855961087-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/53b4a4354479531f12c43b67b36d2715-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4be665851a1951fb22cdcdd8bf21bb54-cc_ft_576.jpg"
+    ]
+  },
+  "43": {
+    "location": "311 Del Monte Dr Houston TX 7701",
+    "price": "17950000",
+    "bed": "4",
+    "bath": "7",
+    "sq": "11,264",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/d4a333c02a0c918d8f507a23945ec8b8-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/c857cf575ff2d83a43ed22d99a86dce4-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/70637c4bf4fa856e95a6e02f944fb677-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/66b8bf40e8f243866eef3a05628f6058-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/990963b22acbc5dbb1db9f65ce493120-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cdd6d125775053f43e64b97ee1d63002-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c9c0912e70f52bf9440ffb4011745708-cc_ft_576.jpg"
+    ]
+  },
+  "44": {
+    "location": " Longbow Ln Houston TX 77024",
+    "price": "17850000",
+    "bed": "6",
+    "bath": "10",
+    "sq": "16,818 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/e1325797731a0e0992371cbe1a3f4f28-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/eb4cd5e8cef472d4209632b725933859-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f45f972cf3fd9707806c8b09c69503e7-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/dca697bb45c4e1fc1a1d5353674d8e04-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/39cedc7d8107e628020ae99c823a53d8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5284de9d395388d61a391ae99a59b34c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/35f4a60dbfae5bbce3614e9ef8d352da-cc_ft_576.jpg"
+    ]
+  },
+  "45": {
+    "location": "109 River Oaks Blvd Houston TX 7701",
+    "price": "17500000",
+    "bed": "6",
+    "bath": "9",
+    "sq": "12,900",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/501a32391c3e6d27bd3fbd26d7cb9324-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/0a73fbe8a51ea1ba85391505c8320670-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/486921759c225e0522b8f9c749d65be8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0ba40490fd8a2090041bd63ab86f5b57-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/bb3a45c200a793d54ee1cb089d354fd5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/37a3b4cfcdd5c4c40389191155ff0f86-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3fdf84a9f0511ee4828f4bc17fe5e399-cc_ft_576.jpg"
+    ]
+  },
+  "46": {
+    "location": "781 Willowick Rd Houston TX 77019",
+    "price": "17500000",
+    "bed": "4",
+    "bath": "6",
+    "sq": "7,211 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/d5ea9b5f548fe2fbfba1d06dfe6e7a49-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/5c0f013101bacee248e8752430facc65-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4b085f8324f5c91985f88614dbe94ee9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/69f767f074c01adf336ea45a74564f92-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/033f713a6096a1ee818140e010f41035-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/92810df5efd6ea887a8ea11dbeaa556a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/20e326f0c4cad8f9aec67a5733d41df6-cc_ft_576.jpg"
+    ]
+  },
+  "47": {
+    "location": "001 Inwood Dr Houston TX 77019",
+    "price": "16500000",
+    "bed": "6",
+    "bath": "11",
+    "sq": "12,024",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/ba34a786f6e1d64282d15094bdf69dc8-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/b5d57db6f749309440df559df2285fb3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/903ea2264355ac5bf79ca1484ecef2c3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ccbb585cb675135de00b9ab43ce83470-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1cd9e0dc85ae75875616483d35049537-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b5ad919c261401609bfa6bc0df875764-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cc3dc1bafdc2df32e8463eb37aac5996-cc_ft_576.jpg"
+    ]
+  },
+  "48": {
+    "location": "256 N 40th St Paradise Valley AZ 85253",
+    "price": "14238000",
+    "bed": "5",
+    "bath": null,
+    "sq": "10,170 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/e6771fe6dc983a1dda8a458c6ca55de8-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/faa7b221bbb9609a287f240a8766fd6c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c8a3d0babfc3de8597918a0b547c57b0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/497b282c82458fcd6c22e8d04e6da2c2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e0a5544ad3e9bdc8b6c21b4b99cbe747-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8e18edd4357e0522b4628b46d8ffcfc9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c6176418c308c49025a5b5c6ab93a2f6-cc_ft_576.jpg"
+    ]
+  },
+  "49": {
+    "location": "025 E Cholla Ln Paradise Valley AZ 85253",
+    "price": "13500000",
+    "bed": "4",
+    "bath": null,
+    "sq": "8,991 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/8494860e7ebabbdf77ba9f4ea3d38a7f-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/e1e638b89b0ef32ea4d613dcc87a730f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/10650f18949ab1f2cab513a42409acec-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1cbdc777f18d897ec3b411483609a8ca-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5bd62db46ef23b54dc10009fefa81c90-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/adf44c6fddd9982b1a295d6d7f9b2231-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/75810e04d4eed139c1119820389bf843-cc_ft_576.jpg"
+    ]
+  },
+  "50": {
+    "location": "150 N 40th St Paradise Valley AZ 85253ActiveEst. payment: $56509/moGet pre-qualifi",
+    "price": "12700000",
+    "bed": "5",
+    "bath": null,
+    "sq": "9,333",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/5fef974c66c6c23bbe7473a57abf5ae8-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/05d2c2736efebc347bf8f0cf878e2a40-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cb16ad65c659ee421a1980fb894d4618-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c15bbac4f91489e15952a3a9fdd39e9b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c8997f2a97b0fd89bf7729dd8885c897-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/436192c91cf96e8b09062c0814621622-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b0ac350b8b64892bf889a980a30d4ad6-cc_ft_576.jpg"
+    ]
+  },
+  "51": {
+    "location": "236 N 40th St Phoenix AZ 85253",
+    "price": "11242000",
+    "bed": "5",
+    "bath": null,
+    "sq": "8,320 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/f8594b12d622d8cdbf81e7eacabcff38-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/a1b5c9ab7a8d1a68d4ddd186dc41aecb-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/228ab9c1dfe060a0f4a80115f0024dc2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c6c12c412bfdf1dbbf5b5baa004d8765-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2cbb7c7d5ca5102800fa2156e1851efc-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fff3bd63821adc5c859d0b540e308755-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/99070d08a4be3573dd14c5d7d34e6b96-cc_ft_576.jpg"
+    ]
+  },
+  "52": {
+    "location": "140 N 40th St Paradise Valley AZ 85253",
+    "price": "10978200",
+    "bed": "5",
+    "bath": null,
+    "sq": "8,132 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a13a82521e34faf535859119ca37c375-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/3631ed414f1518ddefccb8bbe7a366ad-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/eca92be8516d5edf0686675308186dfc-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ef84ae1443201d36717c17262094eb84-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9e27c03c0ecea598c8c26eaa949b6027-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/04f7466a2e7f76bb1fddbf6928eca85d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/61ab51613e9f44c1f91a61859028e2ad-cc_ft_576.jpg"
+    ]
+  },
+  "53": {
+    "location": "246 E Red Rock Dr Phoenix AZ 85018",
+    "price": "8950000",
+    "bed": "4",
+    "bath": null,
+    "sq": "7,500 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/2fcf00ae418e2312b60b9bb57e274dfb-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/69e9d595eca0c527ec12a2196facb35b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b3a2e49f954c57ed2731c97840bf72e4-cc_ft_576.jpg",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "54": {
+    "location": "2 Biltmore Est Phoenix AZ 85016ActiveEst. payment: $39514/moGet pre-qualifi",
+    "price": "8900000",
+    "bed": "6",
+    "bath": null,
+    "sq": "11,697",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/af064d0311d1b61df85d0dcc80f3fa62-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/f1d5c563d4981865045bf27be1dd6171-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0f6a59e8ecaf914ae95d1001cc04a2c0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7cafe78414a32be6ceb7f7edd7086519-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1512acb27020e9d30380631ef1117994-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3bad8ee41470cf5070c8c061f5454ea9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0710fa973e29dfd6a82cd25ca68b9280-cc_ft_576.jpg"
+    ]
+  },
+  "55": {
+    "location": "836 N 36th St Phoenix AZ 85018ActiveEst. payment: $35296/moGet pre-qualifi",
+    "price": "7950000",
+    "bed": "3",
+    "bath": null,
+    "sq": "3,095",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a346c286384d4889229d69e6e7452e51-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/ed94aa669e6e37318d349e148f98b887-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/eb4a82051ceae44f83bb62641f4ace57-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c072c3fd33782f4c7959379c2d01d928-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/38f5ba35cb864618b6408b24f0710e0e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2b1568dddaad9e2959504e40eec3878b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/73f5dd313c33e4464dbe689c290b3ca8-cc_ft_576.jpg"
+    ]
+  },
+  "56": {
+    "location": "400 Alta Dr Fort Worth TX 76107",
+    "price": "10000000",
+    "bed": "4",
+    "bath": "6",
+    "sq": "6,211 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/b50f721124de10d0248c4750d631a121-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/26dec21e976843fae1b48eb030a875d8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/53c95e060e4fa810056a9aae17f7c203-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5ca1d703b4fd1ce0673841b8d66e3470-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a091f2e4127dabf24bbbc0e800aea8e3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/6609ecdc9112c89cdea02b5b29975673-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/96d707bab13ce63e942e4eaeec1fe1eb-cc_ft_576.jpg"
+    ]
+  },
+  "57": {
+    "location": "100 Crestline Rd Fort Worth TX 76107",
+    "price": "6995000",
+    "bed": "6",
+    "bath": "8",
+    "sq": "11,725 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a6d6eecb6b2cc976be3a0b1f6a67f8f9-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/e4406c1181140dbbe99136538c30f66c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/eedc2c8645d70d50fcc63e57d4bc1e4d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/cde1e30ebc706a4e930329c0cd9480cf-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/6a3f669c12846529b9f58eeddb2cf238-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/32998990a40010982388e20dbb85212f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/32998990a40010982388e20dbb85212f-cc_ft_576.jpg"
+    ]
+  },
+  "58": {
+    "location": "400 Overton Crest St Fort Worth TX 76109",
+    "price": "6900000",
+    "bed": "5",
+    "bath": "10",
+    "sq": "11,792 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/356ebde7e6eb0e23eafce10fb8a4d383-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/56e323ead534f6c75c995b36422ffada-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e126975d2e735112f71f31d70149e394-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/05a1401bd7eb928aec40817e4d1a890d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0cc2d0962db75b99476402ccf4f4a5b0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/988f6d395acacb98843bfd923bd4fc25-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/86af9e0a9add046eedd18302ca392f99-cc_ft_576.jpg"
+    ]
+  },
+  "59": {
+    "location": "901 Sanctuary Ln Fort Worth TX 7613",
+    "price": "4825000",
+    "bed": "5",
+    "bath": "9",
+    "sq": "11,615",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/de83f3a1157aee3b73d088e3afd956c6-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/4f1d4d35337b519c57d13798e553588e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/16447ec89ba3e861f503902961bf6bcb-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/62aef070ddb7e6714a20191a15df23ad-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1fed98b02dec615e8836e53c41f70e36-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8a661d29c8f61526a52e1b5bef6d42ac-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d863013053a09f3af169a70796a60c01-cc_ft_576.jpg"
+    ]
+  },
+  "60": {
+    "location": "703 Catalina Ct Fort Worth TX 76107",
+    "price": "3290000",
+    "bed": "4",
+    "bath": "4",
+    "sq": "4,506 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a29ba5444bf59f16d102b31fc568d5a1-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/dfe28c9c8a41062906c5463ac20dc603-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/acbbbb65b9dd0dee5fff9777aee1910e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e5cabfe388f1ec5ff850c3ba00e8cf9c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5beaf56fa2e4a1ce54bd4333b07238c3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3b6d795720787961d8e8197e8f0e549c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/68b24e4a01c155629f55b45fcb94a911-cc_ft_576.jpg"
+    ]
+  },
+  "61": {
+    "location": "649 Saint Laurent Ct Fort Worth TX 76126",
+    "price": "3190000",
+    "bed": "6",
+    "bath": "8",
+    "sq": "10,269 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/c053df258ab4d47ef29681efc580bb1f-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/d327bdb39bdafea2c472160b7e843e3e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0e5922d38e9b26605430d4118ca2ebdf-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5a628bbbc854e913a25b3fad9ac59e7b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c5cf9bbca9751fa4658912bf05bf088f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8017e07390f3541533a6a54aa2073df2-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/6d1ed28db6c61db6d89ea837fde360d4-cc_ft_576.jpg"
+    ]
+  },
+  "62": {
+    "location": "508 Rivercrest Ct Fort Worth TX 76107",
+    "price": "2995000",
+    "bed": "5",
+    "bath": "5",
+    "sq": "6,046 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/6d15ce3df85dd8295cf4a9c3a0a9a158-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/82608468011e5ebf49ea68ae91bff928-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9b19a8ca3480f4fe95c5006f78840a99-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/18dae10d099f35052baac4836bc3511c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7f0c64c8ef51335a91719b96713d6b6e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/32459631eb23392dcd8b9c9e36d1b313-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ef9a27fa340152d82aa67af9c5e0aace-cc_ft_576.jpg"
+    ]
+  },
+  "63": {
+    "location": "000 Brae Ct Fort Worth TX 7611",
+    "price": "2700000",
+    "bed": "4",
+    "bath": "6",
+    "sq": "5,411",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/5f0b9db3ec148d5c2e68b520f5e00341-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/557defaaaad3bd3254dc1649001ccb14-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/66c3abc866fcc003bb1c33e454fe2330-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/974aed96c198b39034b26d7b147b4bb6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c92f1c9f5e19deefccb9ed138f4002c1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5404fe59c0aadbf24e9a6693717131b9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ea4732bf56734be59116dc0191740a05-cc_ft_576.jpg"
+    ]
+  },
+  "64": {
+    "location": "44 Airole Way Los Angeles CA 9007",
+    "price": "295000000",
+    "bed": "21",
+    "bath": "49",
+    "sq": "105,000",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/be2d46dc8ce714b7340a7a32d2021fd5-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/d6cb77ffe985a76a13608879a0dff6db-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1b2dd55bc6b0f96b559a45ee14a40897-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0373e34714be92b7beca5702fa302628-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/acea12e84bda0e777a421176a1f93500-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/dcf6484ab324b7b05ac81a166b54ac59-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/222b330de771f1c7629ed83803f9f4ba-cc_ft_576.jpg"
+    ]
+  },
+  "65": {
+    "location": "650 Cedarbrook Dr Beverly Hills CA 90210",
+    "price": "250000000",
+    "bed": "19",
+    "bath": "33",
+    "sq": "78,000",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/a3765c761a11c25ca43439d2fe9d7664-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/8e49be3d199d356f7da1b7b9589da968-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/57284b6e9647e17e69871258a50972dd-cc_ft_576.jpg",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "66": {
+    "location": "77 Sarbonne Rd Los Angeles CA 90077",
+    "price": "87777777",
+    "bed": "7",
+    "bath": "11",
+    "sq": "-- sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/c5ca52444b0f2aa609147f45ffb56535-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/d5df840d94cb45dd66c377c5c1edb32a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/dca1117a553eb1f3e69d698cddbdf26e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/01c5a0180663e0eb3a5682fb109d3760-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/993dccc9a8cdeb1b350a5fa27c75fe55-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/395274bcc2ba2dd131ad1d03a5c48de1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/56d412bb349c300a6f5c304c32cdc8ae-cc_ft_576.jpg"
+    ]
+  },
+  "67": {
+    "location": "420 Davies Dr Beverly Hills CA 90210",
+    "price": "87000000",
+    "bed": "8",
+    "bath": "14",
+    "sq": "21,800 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/7da78f9eb6d4c5eb208ad2e5e6750ec5-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/2792b0f7853a35af36972d383f754312-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f9511e74ef9a1e45023ff0a0d3d549a1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4903b59e08569f4410c0ecb604c48c91-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5806bf486afdabde15852b9147d546c1-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/1912d054e37e00a3d902b5cf92a1ca0d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/fecbe30104db6733d914f8b975db53fb-cc_ft_576.jpg"
+    ]
+  },
+  "68": {
+    "location": "571 Wallingford Dr Beverly Hills CA 90210",
+    "price": "85000000",
+    "bed": "12",
+    "bath": "24",
+    "sq": "38,000 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/91c728e37be622a4f5d1cda4486d747d-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/faf13c5e554ec0158f3b1257c6ff9bc8-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f7d3545144c5cf1bfdc94cd36b7d28e4-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/77cc59ee4d42f19729cb1f0e677c81e0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/436c3e6cf42a86d5cd1e5ab68fd82c02-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/02d2c1cb6eb48fb940359cfe587d994c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e83cecd78af2a77e5985334473348b77-cc_ft_576.jpg"
+    ]
+  },
+  "69": {
+    "location": "0066 Cielo Dr Beverly Hills CA 9021",
+    "price": "85000000",
+    "bed": "9",
+    "bath": "18",
+    "sq": "21,000",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/84fb6a3332eba242e885b2f519aad4e3-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/e6539b3a493e589989088dee2cc275ef-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2f242911746503fd47ce4c2010c94ba6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e521b21ab4672e442cdbbc8f74b622ff-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/40eab66b6b8406f036988e72b28fd959-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2a96d48504faac6f88d3519ec7b98d5f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/87c4a0ca976e8dcc536c73ed9424196f-cc_ft_576.jpg"
+    ]
+  },
+  "70": {
+    "location": "0 Beverly Park Ter Beverly Hills CA 90210",
+    "price": "80000000",
+    "bed": "8",
+    "bath": "12",
+    "sq": "-- sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/1da3e0a3969a2065ea741889a3e53f93-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/6a0bda449a1b356b064727eac908c455-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/98884fbd0a4a47a43ed4970aa5712dd3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a6141bb7aca5710728b17ecd3c584842-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/c7bd00ee8b784a856476195f91cb6ed6-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/30a20bc946d92711408d68079f02759d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7eb8067524314b4779f11a62653b94f9-cc_ft_576.jpg"
+    ]
+  },
+  "71": {
+    "location": "525 San Vicente Blvd Santa Monica CA 90402",
+    "price": "79000000",
+    "bed": "7",
+    "bath": "13",
+    "sq": "22,640 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/c41861a0e40c7abd365b67b7b3a1c9e6-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/8c34c4a208f13625214a4d9e1e4d3122-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/861cce1fd24c84d2c604d0ae7cd70edc-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7829b5e68fcfcbd4dd1286ab149bbf0c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8437b097fa03745bbca1fed3610a9b2e-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0b76610a129f8e845208352996ded598-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b691dc95ffa131bc5b8b3ccb449ebbef-cc_ft_576.jpg"
+    ]
+  },
+  "72": {
+    "location": "29 NW Skyline Blvd #1 Portland OR 97229",
+    "price": "12500000",
+    "bed": "7",
+    "bath": "9",
+    "sq": "12,000 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/c5c15f9439f0a73b61904d4c80a77e03-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/40ab4062adbf54e4b01ad7b9c82134ef-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/2694a55d69f7b48e34f104433d2ef3dd-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9a2d17d848e14a147463199bfb528d2b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8562f87162d134e0c046702a118059eb-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/f997ca6596b2f33b578e9f689e983d98-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e13578e4774c49e468577cab66cb01b1-cc_ft_576.jpg"
+    ]
+  },
+  "73": {
+    "location": "3000 NW Old Germantown Rd Portland OR 97231ActiveView Zestimate®Est. payment: $38328/moGet pre-qualifi",
+    "price": "8000000",
+    "bed": "4",
+    "bath": "7",
+    "sq": "7,286",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/59a91433c0704c1f232e78b3e41441bb-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/bc1448882cb983373068bd00a2614410-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7dad21b30f9e34e07874cf6fd8f7ef64-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b8afa482790b91e9b5dc32689c75ed84-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3fb51b6ac8d30356f82760fc0b819237-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/157dc8a9cd15ff6e91233c7cabab25ce-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/73a4f8d37527ecb5c6622788c5575f4e-cc_ft_576.jpg"
+    ]
+  },
+  "74": {
+    "location": "912 NW Wind Ridge Dr Portland OR 97229",
+    "price": "7778500",
+    "bed": "4",
+    "bath": "9",
+    "sq": "11,363 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/b0e53e97cfe453a23ac134c03f8aa264-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/123803aef9b542c39e64bfa14d886a72-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/ed037a2a72888ade40c5ab4a9e493c1d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/15b8de48f67611a88bd45ded0d7fdb07-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/3b0009a9a5040dcf120ca30946879428-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/22c23d3941317a058cec0ba56d874a88-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9355c98836f8ed60d77bbb24309ceee4-cc_ft_576.jpg"
+    ]
+  },
+  "75": {
+    "location": "2955 NW Skyline Blvd Portland OR 97231",
+    "price": "5750000",
+    "bed": "4",
+    "bath": "5",
+    "sq": "6,817 sqft",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/887a35f81211d40d61f4dd7e3cd22a96-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/b5e3e5571bda2bad0561f4ec37e1c2aa-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/5a6f446131e4c2148698b4d4fae18bd0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/29bcd55a0dfee23166639ea87d00b921-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/b1fd89b5dd95e74138992295f551f717-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4ecd43a2eff42000a01fea75e556470c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a0d8a5e3cc9319a3b2cca5bf4e96f85b-cc_ft_576.jpg"
+    ]
+  },
+  "76": {
+    "location": "600 S Greenwood Rd Portland OR 97219ActiveZestimate®: None HelpHelpEst. payment: $20122/moGet pre-qualifi",
+    "price": "4200000",
+    "bed": "5",
+    "bath": "7",
+    "sq": "8,919",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/acc7048953085b6de3c73001c0ba2316-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/e90443c022334523af65d4d1c56fbfbd-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/99aecbd8bab84dc70d2142468a0d4405-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a18247e80075e33970df2382589d6f7c-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4f2ca42dc459cd15bf1e98a1344e9a2a-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/27754e99bfea2022b289846dee3f5806-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/0249298e18770a90d7d17f81020bb129-cc_ft_576.jpg"
+    ]
+  },
+  "77": {
+    "location": "211 NE Thompson St Portland OR 97212ActiveZestimate®: $4001300Est. payment: $19164/moGet pre-qualifi",
+    "price": "4000000",
+    "bed": "7",
+    "bath": "6",
+    "sq": "8,570",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/2f566bcbeab197f74edec948fa04cf99-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/6e2df3e7164112e75555892034878ea0-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/69eeabbf584b392a4b05d66c97e31962-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/4adcb055f9d56a41036ae3bf72fcc7f5-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/823a37a03066b1b27fe23d1acf639f1f-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/22d3f6a99f598c648f190744c7630118-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/e3696256a6d74448c9908a5ce8e967fe-cc_ft_576.jpg"
+    ]
+  },
+  "78": {
+    "location": "27 SW Naito Pkwy Portland OR 97204ActiveZestimate®: $3941900Est. payment: $19164/moGet pre-qualifi",
+    "price": "4000000",
+    "bed": "2",
+    "bath": "5",
+    "sq": "6,875",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/28975ff3892a62a5e8d6991c9944abf1-cc_ft_960.jpg",
+      "https://photos.zillowstatic.com/fp/1c714fa33c99b4c25c874b4ccfe54c06-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/9aa505a3825f5b24fd34443e6b82617b-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/7715f9a414aacd1991e511ee02fbadab-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d72ee42bfe56c215c03c0ac4a57f46fa-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/308d816ccdfe0215f04173c913eaff64-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/8198d32abfe7d356b004be31589d2c98-cc_ft_576.jpg"
+    ]
+  },
+  "79": {
+    "location": "841 SW Montgomery Dr Portland OR 97201ActiveZestimate®: $3654900Est. payment: $17966/moGet pre-qualifi",
+    "price": "3750000",
+    "bed": "7",
+    "bath": "6",
+    "sq": "7,448",
+    "homePics": [
+      "https://photos.zillowstatic.com/fp/eb27f0f1e13d49d77e78628df523140c-cc_ft_960.jpg",
+      "https://my.matterport.com/api/v2/player/models/KaqWAWeas5R/thumb",
+      "https://photos.zillowstatic.com/fp/6e7b7425f581165a00484e84deaa0bb3-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a576162096f9e72719b0612e4d0288ca-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/a59fbe4681313e24785ce0d1f2a1fc7d-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/91d408c252fa58af624107ad39812bc9-cc_ft_576.jpg",
+      "https://photos.zillowstatic.com/fp/d8518d412ae144053b01593c64847a24-cc_ft_576.jpg"
+    ]
+  }
+}

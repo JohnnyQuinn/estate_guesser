@@ -1,37 +1,28 @@
-import {useContext} from "react";
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
-import { GameContext } from "../App";
 // import "./Landing.css"
 
-function Landing() { 
-    const gameContext = useContext(GameContext)
-    // console.log(gameContext[0])
-    // gameContext[1](4)
-    // console.log(gameContext[0])
-    // console.log(gameContext[2])
-    // gameContext[3]([0,1])
+// populates a list (len = 10) with different random numbers under 80 
+// this serves as a way for the game to access the house data json randomly
+function randomizeHouseIndexes() {
+    const randomHouseIndexes = []
+    const max = 80
 
-    // function shuffleHouseIndex() {
-    //     this.state.houseIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    //     let array = this.state.houseIndex
-    //     let currentIndex = array.length,  randomIndex;
-      
-    //     // While there remain elements to shuffle...
-    //     while (currentIndex != 0) {
-      
-    //       // Pick a remaining element...
-    //       randomIndex = Math.floor(Math.random() * currentIndex);
-    //       currentIndex--;
-      
-    //       // And swap it with the current element.
-    //       [array[currentIndex], array[randomIndex]] = [
-    //         array[randomIndex], array[currentIndex]];
-    //     }
-      
-    //     this.state.houseIndex = array
-    // }
-    
+    for(let i=0;i<10;i++){
+        let ranNum = Math.floor(Math.random() * max)
+        while(randomHouseIndexes.includes(ranNum)){
+            ranNum = Math.floor(Math.random() * max)
+        }
+        randomHouseIndexes.push(ranNum)
+    }
+    console.log(`randomHouseIndexes: ${randomHouseIndexes}`)
+    window.localStorage.setItem('randomHouseIndexes', randomHouseIndexes)
+}
+
+function Landing() {   
+    window.localStorage.clear()
+    window.localStorage.setItem('gamePage', 0)
+    randomizeHouseIndexes()
     return (
             <div className="landing">
                 <h1>EstateGuesser</h1>
