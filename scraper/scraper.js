@@ -9,7 +9,7 @@ const colors = require('colors')
 
 const log = console.log;
 
-const headless = true; // headless: false means browser window opens, headless: true means without browser window 
+const headless = true; // headless: false means browser UI opens, headless: true means without browser UI
 const args = [`--window-size=${1920},${1080}`]
 let browserRestarted = false;
 

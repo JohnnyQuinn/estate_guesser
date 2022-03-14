@@ -15,12 +15,7 @@ function App() {
   return (
     <div className="App"> 
         <Routes>
-          <Route exact path="/" element={
-            <GameContext.Provider value={[gamePage, setGamePage, houseIndexArr, setHouseIndexArr]}>
-              <Landing/>
-            </GameContext.Provider>}>
-          </Route>
-          
+          <Route exact path="/" element={<Landing />}/>
           <Route path="/game" element={<Game/>}/>
         </Routes>
     </div>

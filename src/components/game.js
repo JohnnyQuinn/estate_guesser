@@ -49,11 +49,13 @@ class Game extends React.Component {
         for(let i=0;i<strArr.length;i++){
             strArr[i] = (Number(strArr[i]))
         }
-        this.state.houseIndex = strArr
+        // this.state.houseIndex = strArr
+        this.setState({houseIndex: strArr})
+        console.log(strArr)
     }
 
     setCurrData() {
-        //gets random index based on length of houseIndex
+        //gets random number to use for the index from houseIndex based on the current gamePage
         const index = this.state.houseIndex[this.state.gamePage]
         console.log(index)
         this.state.price = Number(HomeData[index]["price"]);

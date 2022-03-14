@@ -6,10 +6,11 @@ import { GameContext } from "../App";
 
 function Landing() { 
     const gameContext = useContext(GameContext)
-    console.log(gameContext[0])
-    gameContext[1](3)
-    console.log(gameContext[0])
-    console.log(gameContext[2])
+    // console.log(gameContext[0])
+    // gameContext[1](4)
+    // console.log(gameContext[0])
+    // console.log(gameContext[2])
+    // gameContext[3]([0,1])
 
     // function shuffleHouseIndex() {
     //     this.state.houseIndex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
