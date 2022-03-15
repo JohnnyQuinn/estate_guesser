@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 import HomeData from "../home-data/home-data.json"
 import CurrencyInput from 'react-currency-input-field';
 
@@ -24,6 +25,8 @@ function Game() {
     const [guessInput, setGuessInput] = useState('')
 
     const [showResult, setShowResult] = useState(false)
+
+    const navigate = useNavigate()
 
     // set first img to same size as others
     let cardImgStyle = {
@@ -80,12 +83,17 @@ function Game() {
     // handles when the NEXT button is press
     // NEXT button is type="submit" so it reloads the page (and when the page reloads it will be different because the gamePage value is changed)
     function handleNext() {
-        localStorage.setItem('gamePage', Number(gamePage + 1))
+        gamePage += 1 
+        if(gamePage > 9){
+            navigate('/game-over')
+        } else {
+            localStorage.setItem('gamePage', gamePage)
+        }
     }
 
-    console.log(`localStorage gamePage: ${localStorage.getItem('gamePage')}`)
-    console.log(`gamePage: ${gamePage}`)
+    console.log(`gamePage: ${gamePage}, typeof: ${typeof(gamePage)}`)
     console.log(`randomHouseIndexes: ${randomHouseIndexes}`)   
+    // if the gamePage is over then redirect to the game over page
     formatHouseIndex()
     setCurrData()
     return (
