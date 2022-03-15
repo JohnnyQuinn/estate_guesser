@@ -8,8 +8,9 @@ function Game() {
     const navigate = useNavigate()
     const [guessInput, setGuessInput] = useState('')
     const [showResult, setShowResult] = useState(false)
+    const [guessFinal, setGuessFinal] = useState(0)
 
-    let guessFinal = ''
+    // let guessFinal = ''
     let guessDiff = 0
     let gamePage = Number(localStorage.getItem('gamePage'))
     let randomHouseIndexes = localStorage.getItem('randomHouseIndexes')
@@ -61,7 +62,8 @@ function Game() {
 
     // compares user's guess with actual price and displays the result
     function handleSubmit() {
-        guessFinal = Number(((guessInput).slice(1)).replace(/,/g, ''))
+        setGuessFinal(Number(((guessInput).slice(1)).replace(/,/g, '')))
+        console.log(guessFinal)
         guessDiff = formatter.format(price - guessFinal)
         setShowResult(true)
     }
@@ -87,7 +89,7 @@ function Game() {
             localStorage.setItem('gamePage', gamePage)
         }
     }
-    
+
     console.log(`gamePage: ${gamePage}, typeof: ${typeof(gamePage)}`)
     console.log(`randomHouseIndexes: ${randomHouseIndexes}`)   
     formatHouseIndex()
