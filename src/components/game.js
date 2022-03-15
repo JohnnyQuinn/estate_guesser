@@ -5,10 +5,15 @@ import HomeData from "../home-data/home-data.json"
 import CurrencyInput from 'react-currency-input-field';
 
 function Game() {
+    const navigate = useNavigate()
+    const [guessInput, setGuessInput] = useState('')
+    const [showResult, setShowResult] = useState(false)
+
     let guessFinal = ''
     let guessDiff = 0
     let gamePage = Number(localStorage.getItem('gamePage'))
     let randomHouseIndexes = localStorage.getItem('randomHouseIndexes')
+
     // HomeData
     let price = 0
     let homePics = []
@@ -16,30 +21,20 @@ function Game() {
     let bed = ''
     let bath = ''
     let sq = ''
+
     // formats numbers to USD
-    let formatter = new Intl.NumberFormat('en-US', {
+    const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
     })
-
-    const [guessInput, setGuessInput] = useState('')
-
-    const [showResult, setShowResult] = useState(false)
-
-    const navigate = useNavigate()
-
     // set first img to same size as others
-    let cardImgStyle = {
+    const cardImgStyle = {
         width: '576px', 
         height: '432px'
     }
-    let resultsDisplay = {
-        display: 'none'
-    }
-    let formDisplay = {
-        display: 'inline-block'
-    }
 
+    // since localStorage only stores strings the data from localStorage needs to be converted from 
+    // string to an array
     function formatHouseIndex() { 
         let strArr = randomHouseIndexes
         strArr = strArr.split(',')
@@ -51,8 +46,9 @@ function Game() {
         console.log(numArr)
     }
 
+    // sets all the house data objects to the appropriate values from house-data.json
     function setCurrData() {
-        //gets random number to use for the index from houseIndex based on the current gamePage
+        //gets random number from randomHouseIndexes based on the current gamePage to use for the index when accessing the house data from house-data.json
         const index = randomHouseIndexes[gamePage]
         console.log(`index: ${index}`)
         price = Number(HomeData[index]["price"]);
@@ -63,13 +59,14 @@ function Game() {
         sq = HomeData[index]['sq']
     }
 
+    // compares user's guess with actual price and displays the result
     function handleSubmit() {
         guessFinal = Number(((guessInput).slice(1)).replace(/,/g, ''))
-        // compares user guess with actual price
         guessDiff = formatter.format(price - guessFinal)
         setShowResult(true)
     }
 
+    // result component
     const Result = () => {
         return (
             <Form onSubmit={handleNext}>
@@ -80,8 +77,8 @@ function Game() {
         )
     }
 
-    // handles when the NEXT button is press
-    // NEXT button is type="submit" so it reloads the page (and when the page reloads it will be different because the gamePage value is changed)
+    // > handles when the NEXT button is press and will redirect to the game-over component if the user finishes guessing 10 houses
+    // > NEXT button is type="submit" so it reloads the page (and when the page reloads it will be different because the gamePage value is changed)
     function handleNext() {
         gamePage += 1 
         if(gamePage > 9){
@@ -90,10 +87,9 @@ function Game() {
             localStorage.setItem('gamePage', gamePage)
         }
     }
-
+    
     console.log(`gamePage: ${gamePage}, typeof: ${typeof(gamePage)}`)
     console.log(`randomHouseIndexes: ${randomHouseIndexes}`)   
-    // if the gamePage is over then redirect to the game over page
     formatHouseIndex()
     setCurrData()
     return (
@@ -139,7 +135,7 @@ function Game() {
                                         </Col>
                                     </Row>
                                 </Container>
-                                <Form style={formDisplay}>
+                                <Form>
                                     <Form.Group>
                                         <Form.Label><h3>Guess The Price!</h3></Form.Label>
                                         <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>

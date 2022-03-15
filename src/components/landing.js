@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 // import "./Landing.css"
 
-// populates a list (len = 10) with different random numbers under 80 
-// this serves as a way for the game to access the house data json randomly
+// > populates a list (len = 10) with different random numbers under 80 
+// > this serves as a way for the game to access random indexes in house data json 
 function randomizeHouseIndexes() {
     const randomHouseIndexes = []
     const max = 80
@@ -19,10 +19,16 @@ function randomizeHouseIndexes() {
     window.localStorage.setItem('randomHouseIndexes', randomHouseIndexes)
 }
 
-function Landing() {   
+function setData() {
     window.localStorage.clear()
     window.localStorage.setItem('gamePage', 0)
     randomizeHouseIndexes()
+    window.localStorage.setItem('totalDiff', 0)
+    window.localStorage.setItem('smallestDiff', 0)
+}
+
+function Landing() {   
+    setData()
     return (
             <div className="landing">
                 <h1>EstateGuesser</h1>
