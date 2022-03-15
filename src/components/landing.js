@@ -20,11 +20,11 @@ function randomizeHouseIndexes() {
 }
 
 function setData() {
-    window.localStorage.clear()
-    window.localStorage.setItem('gamePage', 0)
+    localStorage.clear()
+    localStorage.setItem('gamePage', 0)
     randomizeHouseIndexes()
-    window.localStorage.setItem('totalDiff', 0)
-    window.localStorage.setItem('smallestDiff', 0)
+    localStorage.setItem('totalDiff', 0)
+    localStorage.setItem('smallestDiff', 0)
 }
 
 function Landing() {   

@@ -10,10 +10,10 @@ function Game() {
     const [showResult, setShowResult] = useState(false)
     const [guessFinal, setGuessFinal] = useState(0)
 
-    // let guessFinal = ''
-    let guessDiff = 0
     let gamePage = Number(localStorage.getItem('gamePage'))
     let randomHouseIndexes = localStorage.getItem('randomHouseIndexes')
+    let totalDiff = Number(localStorage.getItem('totalDiff'))
+    let smallestDiff = Number(localStorage.getItem('smallestDiff'))
 
     // HomeData
     let price = 0
@@ -62,9 +62,22 @@ function Game() {
 
     // compares user's guess with actual price and displays the result
     function handleSubmit() {
+        // sets the value of guessFinal and formats it from a string (with commas) to a number 
         setGuessFinal(Number(((guessInput).slice(1)).replace(/,/g, '')))
-        console.log(guessFinal)
-        guessDiff = formatter.format(price - guessFinal)
+        // calculates the absolute difference of the actual price with the user's guess
+        let guessDiff = Math.abs(price - guessFinal)
+        // adds the difference to the totalDiff
+        localStorage.setItem('totalDiff', totalDiff + guessDiff)
+
+        //if this is the first page of the game then set the value of the smallestDiff
+        // if not then check to see if the smallestDiff is greater than the more recent guess and if so, set the value of the 
+        // smallestDiff = guessDiff
+        if(gamePage == 0){
+            localStorage.setItem('smallestDiff', guessDiff)
+        } else if(smallestDiff > guessDiff){
+            localStorage.setItem('smallestDiff', guessDiff)
+        }
+
         setShowResult(true)
     }
 
