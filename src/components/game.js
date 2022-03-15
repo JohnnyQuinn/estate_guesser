@@ -7,6 +7,7 @@ import CurrencyInput from 'react-currency-input-field';
 function Game() {
     const navigate = useNavigate()
     const [guessInput, setGuessInput] = useState('')
+    const [showGuess, setShowGuess] = useState(true)
     const [showResult, setShowResult] = useState(false)
     const [guessFinal, setGuessFinal] = useState(0)
 
@@ -79,6 +80,7 @@ function Game() {
         }
 
         setShowResult(true)
+        setShowGuess(false)
     }
 
     // result component
@@ -88,6 +90,18 @@ function Game() {
                 <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
                 <h2>Your Guess: {formatter.format(guessFinal)}</h2>
                 <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
+            </Form>
+        )
+    }
+
+    const GuessInputForm = () => {
+        return (
+            <Form>
+                <Form.Group>
+                    <Form.Label><h3>Guess The Price!</h3></Form.Label>
+                    <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
+                </Form.Group>
+                <Button variant="primary" type="button" onClick={handleSubmit}><strong>SUBMIT</strong></Button>
             </Form>
         )
     }
@@ -150,13 +164,13 @@ function Game() {
                                         </Col>
                                     </Row>
                                 </Container>
-                                <Form>
+                                {showGuess && <Form>
                                     <Form.Group>
                                         <Form.Label><h3>Guess The Price!</h3></Form.Label>
                                         <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
                                     </Form.Group>
                                     <Button variant="primary" type="button" onClick={handleSubmit}><strong>SUBMIT</strong></Button>
-                                </Form>
+                                </Form>}
                                 { showResult ? <Result /> : null}
                             </Card.Body>
                         </Card>
