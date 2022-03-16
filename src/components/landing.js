@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+// import { Button } from 'react-bootstrap';
+import ReactDOM from 'react-dom';
+import Button from '@mui/material/Button';
+import NavBar from './navbar'
 // import "./Landing.css"
 
 // > populates a list (len = 10) with different random numbers under 80 
@@ -31,9 +34,10 @@ function Landing() {
     setData()
     return (
             <div className="landing">
+                <NavBar />
                 <h1>EstateGuesser</h1>
                 <h2>Can you guess the price of a <strong>random house?</strong></h2>
-                <Button variant="primary"><Link to="/game" style={{ color: "white" }}> PLAY </Link></Button>
+                <Button variant="contained"><Link to="/game" style={{ color: "white" }}> PLAY </Link></Button>
             </div>
     )
 }

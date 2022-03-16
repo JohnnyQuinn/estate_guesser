@@ -1,8 +1,9 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import HomeData from "../home-data/home-data.json"
 import CurrencyInput from 'react-currency-input-field';
+import Navbar from './navbar'
 
 function Game() {
     const navigate = useNavigate()
@@ -83,29 +84,6 @@ function Game() {
         setShowGuess(false)
     }
 
-    // result component
-    const Result = () => {
-        return (
-            <Form onSubmit={handleNext}>
-                <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
-                <h2>Your Guess: {formatter.format(guessFinal)}</h2>
-                <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
-            </Form>
-        )
-    }
-
-    const GuessInputForm = () => {
-        return (
-            <Form>
-                <Form.Group>
-                    <Form.Label><h3>Guess The Price!</h3></Form.Label>
-                    <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                </Form.Group>
-                <Button variant="primary" type="button" onClick={handleSubmit}><strong>SUBMIT</strong></Button>
-            </Form>
-        )
-    }
-
     // > handles when the NEXT button is press and will redirect to the game-over component if the user finishes guessing 10 houses
     // > NEXT button is type="submit" so it reloads the page (and when the page reloads it will be different because the gamePage value is changed)
     function handleNext() {
@@ -116,19 +94,21 @@ function Game() {
             localStorage.setItem('gamePage', gamePage)
         }
     }
-
-    console.log(`gamePage: ${gamePage}, typeof: ${typeof(gamePage)}`)
-    console.log(`randomHouseIndexes: ${randomHouseIndexes}`)   
+  
     formatHouseIndex()
     setCurrData()
+    console.log(`gamePage: ${gamePage}, typeof: ${typeof(gamePage)}`)
+    console.log(`randomHouseIndexes: ${randomHouseIndexes}, typeof: ${typeof(randomHouseIndexes)}`) 
     return (
         <div className="game">
+            <Navbar />
             <Container fluid>
                 <Row>
                     <Col></Col>
                     <Col xs={9}>
                         <Card border="primary" >
                             <Card.Body>
+                                <Card.Text>{(gamePage) + 1}/10</Card.Text>
                                 <Container>
                                     <Row>
                                         <Col>
@@ -171,7 +151,13 @@ function Game() {
                                     </Form.Group>
                                     <Button variant="primary" type="button" onClick={handleSubmit}><strong>SUBMIT</strong></Button>
                                 </Form>}
-                                { showResult ? <Result /> : null}
+                                { showResult ? 
+                                    <Form>
+                                        <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
+                                        <h2>Your Guess: {formatter.format(guessFinal)}</h2>
+                                        <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
+                                    </Form> 
+                                : null}
                             </Card.Body>
                         </Card>
                     </Col>
