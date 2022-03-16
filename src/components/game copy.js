@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
+// import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import HomeData from "../home-data/home-data.json"
 import CurrencyInput from 'react-currency-input-field';
@@ -11,6 +11,10 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Container from '@mui/material/Container'
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { InputAdornment } from '@mui/material';
+import Carousel from 'react-material-ui-carousel'
 
 
 function Game() {
@@ -111,66 +115,29 @@ function Game() {
         <div className="game">
             <Navbar />
             <Container fluid>
-                <Row>
-                    <Col></Col>
-                    <Col xs={9}>
-                        <Card border="primary" >
-                            <Card.Body>
-                                <Card.Text>{(gamePage) + 1}/10</Card.Text>
-                                <Container>
-                                    <Row>
-                                        <Col>
-                                            <Carousel>
-                                                <Carousel.Item>
-                                                    <img style={cardImgStyle} src={homePics[0]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[1]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[2]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[3]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[4]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[5]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[6]}/>
-                                                </Carousel.Item>
-                                            </Carousel>
-                                        </Col>
-                                        <Col>
-                                            <Card.Title><h1>Location: </h1>{location}</Card.Title>
-                                            <Card.Text><h2>Bed(s):</h2> {bed} </Card.Text>
-                                            <Card.Text><h2>Bath(s):</h2> {bath}</Card.Text>
-                                            <Card.Text><h2>Square Footage:</h2> {sq}</Card.Text>
-                                        </Col>
-                                    </Row>
-                                </Container>
-                                {showGuess && <Form>
-                                    <Form.Group>
-                                        <Form.Label><h3>Guess The Price!</h3></Form.Label>
-                                        <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                                    </Form.Group>
-                                    <Button variant="primary" type="button" onClick={handleSubmit}><strong>SUBMIT</strong></Button>
-                                </Form>}
-                                { showResult ? 
-                                    <Form>
-                                        <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
-                                        <h2>Your Guess: {formatter.format(guessFinal)}</h2>
-                                        <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
-                                    </Form> 
-                                : null}
-                            </Card.Body>
+                <Grid container direction="row">
+                    <Grid item></Grid>
+                    <Grid item xs={10}>
+                        <Card>
+                            <CardContent>
+                                <Grid container direction="row">
+                                    <Grid> {/*insert carousel here */}</Grid>
+                                    <Grid>
+                                        <Typography variant="h4">Location: {location}</Typography>
+                                        <Typography variant="h4">Bed(s): {bed}</Typography>
+                                        <Typography variant="h4">Bath(s): {bath}</Typography>
+                                        <Typography variant="h4">Square Footage: {sq}</Typography>
+                                    </Grid>
+                                </Grid>
+                                <FormControl>
+                                    <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
+                                    <Button onClick={handleSubmit}><strong>ENTER</strong></Button>
+                                </FormControl>
+                            </CardContent>
                         </Card>
-                    </Col>
-                    <Col></Col>
-                </Row>
+                    </Grid>
+                    <Grid item></Grid>
+                </Grid>
             </Container>
         </div>
     )

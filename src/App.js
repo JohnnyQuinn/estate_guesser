@@ -3,7 +3,7 @@ import './App.css';
 import { Routes, Route} from 'react-router-dom';
 
 import Landing from './components/landing'; 
-import Game from './components/game';
+import Game from './components/game copy';
 import GameOver from './components/game-over'
 
 function App() {
