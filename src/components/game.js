@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
+// import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import HomeData from "../home-data/home-data.json"
 import CurrencyInput from 'react-currency-input-field';
@@ -11,6 +11,11 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Container from '@mui/material/Container'
+import CardContent from '@mui/material/CardContent';
+import h4 from '@mui/material/Typography';
+import { InputAdornment } from '@mui/material';
+import Carousel from 'react-material-ui-carousel'
+import { margin } from '@mui/system';
 
 
 function Game() {
@@ -71,7 +76,7 @@ function Game() {
     }
 
     // compares user's guess with actual price and displays the result
-    function handleSubmit() {
+    function handleEnter() {
         // sets the value of guessFinal and formats it from a string (with commas) to a number 
         setGuessFinal(Number(((guessInput).slice(1)).replace(/,/g, '')))
         // calculates the absolute difference of the actual price with the user's guess
@@ -88,8 +93,8 @@ function Game() {
             localStorage.setItem('smallestDiff', guessDiff)
         }
 
-        setShowResult(true)
-        setShowGuess(false)
+        setShowResult(!showResult)
+        setShowGuess(!showGuess)
     }
 
     // > handles when the NEXT button is press and will redirect to the game-over component if the user finishes guessing 10 houses
@@ -100,6 +105,9 @@ function Game() {
             navigate('/game-over')
         } else {
             localStorage.setItem('gamePage', gamePage)
+            setShowResult(!showResult)
+            setShowGuess(!showGuess)
+            setGuessInput(0)
         }
     }
   
@@ -109,68 +117,64 @@ function Game() {
     console.log(`randomHouseIndexes: ${randomHouseIndexes}, typeof: ${typeof(randomHouseIndexes)}`) 
     return (
         <div className="game">
-            <Navbar />
+            <Navbar />  
             <Container fluid>
-                <Row>
-                    <Col></Col>
-                    <Col xs={9}>
-                        <Card border="primary" >
-                            <Card.Body>
-                                <Card.Text>{(gamePage) + 1}/10</Card.Text>
-                                <Container>
-                                    <Row>
-                                        <Col>
-                                            <Carousel>
-                                                <Carousel.Item>
-                                                    <img style={cardImgStyle} src={homePics[0]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[1]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[2]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[3]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[4]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[5]}/>
-                                                </Carousel.Item>
-                                                <Carousel.Item>
-                                                    <img src={homePics[6]}/>
-                                                </Carousel.Item>
-                                            </Carousel>
-                                        </Col>
-                                        <Col>
-                                            <Card.Title><h1>Location: </h1>{location}</Card.Title>
-                                            <Card.Text><h2>Bed(s):</h2> {bed} </Card.Text>
-                                            <Card.Text><h2>Bath(s):</h2> {bath}</Card.Text>
-                                            <Card.Text><h2>Square Footage:</h2> {sq}</Card.Text>
-                                        </Col>
-                                    </Row>
-                                </Container>
-                                {showGuess && <Form>
-                                    <Form.Group>
-                                        <Form.Label><h3>Guess The Price!</h3></Form.Label>
-                                        <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                                    </Form.Group>
-                                    <Button variant="primary" type="button" onClick={handleSubmit}><strong>SUBMIT</strong></Button>
-                                </Form>}
-                                { showResult ? 
-                                    <Form>
-                                        <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
-                                        <h2>Your Guess: {formatter.format(guessFinal)}</h2>
-                                        <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
-                                    </Form> 
-                                : null}
-                            </Card.Body>
+                <Grid container direction="row">
+                    <Grid item xs></Grid>
+                    <Grid item xs={11}>
+                        <Card height='auto' width='auto'>
+                            <CardContent>
+                                <h4 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage}/10</h4>
+                                <Grid container direction="row" justifyContent="center" rowSpacing={1}>
+                                    <Grid container xs fluid justifyContent="flex-start" > 
+                                        <Carousel autoPlay={false}
+                                            indicatorContainerProps={{
+                                                style: {
+                                                    width:'37rem',
+                                                    marginTop:'26rem'
+                                                }
+                                            }} 
+                                        >
+                                            { homePics.map((i) => <img src={i} style={{width:'100%'}}/>)}
+                                        </Carousel>
+                                    </Grid>
+                                    <Grid xs={5
+                                    } style={{width:'100%'}}>
+                                        <Grid container direction='column' justifyContent='space-evenly' textAlign="left">
+                                            <h4 variant="h4">Location: <p>{location}</p></h4>
+                                            <h4 variant="h4">Bed(s): <p>{bed}</p></h4>
+                                            <h4 variant="h4">Bath(s): <p>{bath}</p></h4>
+                                            <h4 variant="h4">Square Footage: <p>{sq}</p></h4>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                                <Grid container direction='row' justifyContent='flex-start' >
+                                    {showGuess && 
+                                            <FormControl style={{width:'72%'}}>
+                                                <Grid justifyContent='flex-start' direction='row'>
+                                                    <CurrencyInput style={{width:'80%'}} placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
+                                                    <Button style={{width:'20%'}} onClick={handleEnter}><strong>ENTER</strong></Button>
+                                                </Grid>
+                                            </FormControl>
+
+                                    }
+                                    { showResult ? 
+                                        <FormControl style={{width:'70%'}}>
+                                            <Grid direction='column' justifyContent='flex-start' textAlign='left'>
+                                                <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
+                                                <Grid container direction='row' justifyContent='space-between'>
+                                                    <h2>Your Guess: {formatter.format(guessFinal)}</h2>
+                                                    <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
+                                                </Grid>
+                                            </Grid>
+                                        </FormControl> 
+                                    : null}
+                                </Grid>
+                            </CardContent>
                         </Card>
-                    </Col>
-                    <Col></Col>
-                </Row>
+                    </Grid>
+                    <Grid item xs></Grid>
+                </Grid>
             </Container>
         </div>
     )
