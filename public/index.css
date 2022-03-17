@@ -2,7 +2,36 @@ h1, h2, h3, h4 {
     font-family: 'Baloo 2', cursive;
     font-weight: 800;
 }
+
 p {
     font-family: 'Baloo 2', cursive;
     font-weight: 400;
+}
+
+#root {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: linear-gradient(112.94deg, rgba(0, 255, 174, 0) -10.46%, rgba(0, 255, 174, 0) 14.22%, #46CDCF 99.69%);}
+
+.brand {
+    color: #48466D;
+    text-shadow: -4px 4px 0px #46CDCF;
+    font-size: 144px;
+}
+
+#landingBrand {
+
+}
+
+#landingSub {
+    font-size: 40px;
+    color: #1C709A
+}
+
+.Button {
+    color: white; 
 }

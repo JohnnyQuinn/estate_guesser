@@ -13,7 +13,7 @@ import Card from '@mui/material/Card'
 import Container from '@mui/material/Container'
 import CardContent from '@mui/material/CardContent';
 import h4 from '@mui/material/Typography';
-import { InputAdornment } from '@mui/material';
+import { FormLabel, InputAdornment } from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
 import { margin } from '@mui/system';
 
@@ -151,12 +151,12 @@ function Game() {
                                 <Grid container direction='row' justifyContent='flex-start' >
                                     {showGuess && 
                                             <FormControl style={{width:'72%'}}>
+                                                <FormLabel style={{width:'30%'}}><h3>Guess The Price!</h3></FormLabel>
                                                 <Grid justifyContent='flex-start' direction='row'>
                                                     <CurrencyInput style={{width:'80%'}} placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
                                                     <Button style={{width:'20%'}} onClick={handleEnter}><strong>ENTER</strong></Button>
                                                 </Grid>
                                             </FormControl>
-
                                     }
                                     { showResult ? 
                                         <FormControl style={{width:'70%'}}>

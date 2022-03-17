@@ -35,9 +35,9 @@ function Landing() {
     return (
             <div className="landing">
                 <NavBar />
-                <h1 className='font-link'>EstateGuesser</h1>
-                <h2>Can you guess the price of a <strong>random house?</strong></h2>
-                <Button variant="contained"><Link to="/game" style={{ color: "white" }}> PLAY </Link></Button>
+                <h1 className='brand' id='landingBrand'>EstateGuesser</h1>
+                <p id='landingSub'>Can you guess the price of a <strong>random house?</strong></p>
+                <Button variant="contained" size='large' href='/game'>PLAY</Button>
             </div>
     )
 }
