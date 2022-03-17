@@ -76,7 +76,7 @@ function Game() {
     }
 
     // compares user's guess with actual price and displays the result
-    function handleSubmit() {
+    function handleEnter() {
         // sets the value of guessFinal and formats it from a string (with commas) to a number 
         setGuessFinal(Number(((guessInput).slice(1)).replace(/,/g, '')))
         // calculates the absolute difference of the actual price with the user's guess
@@ -107,6 +107,7 @@ function Game() {
             localStorage.setItem('gamePage', gamePage)
             setShowResult(!showResult)
             setShowGuess(!showGuess)
+            setGuessInput(0)
         }
     }
   
@@ -123,7 +124,7 @@ function Game() {
                     <Grid item xs={11}>
                         <Card height='auto' width='auto'>
                             <CardContent>
-                                <Typography variant='h4' textAlign='right' marginBottom={'1%'}>{gamePage}/10</Typography>
+                                <Typography variant='h4' textAlign='left' marginBottom={'1%'}>{gamePage}/10</Typography>
                                 <Grid container direction="row" justifyContent="center" rowSpacing={1}>
                                     <Grid container xs fluid justifyContent="flex-start" > 
                                         <Carousel autoPlay={false}
@@ -147,21 +148,28 @@ function Game() {
                                         </Grid>
                                     </Grid>
                                 </Grid>
-                                {showGuess && 
-                                    <Grid container direction='row' justifyContent='flex-start'>
-                                        <FormControl>
-                                            <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                                            <Button onClick={handleSubmit}><strong>ENTER</strong></Button>
-                                        </FormControl>
-                                    </Grid>
-                                }
-                                { showResult ? 
-                                    <FormControl>
-                                        <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
-                                        <h2>Your Guess: {formatter.format(guessFinal)}</h2>
-                                        <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
-                                    </FormControl> 
-                                : null}
+                                <Grid container direction='row' justifyContent='flex-start' >
+                                    {showGuess && 
+                                            <FormControl style={{width:'72%'}}>
+                                                <Grid justifyContent='flex-start' direction='row'>
+                                                    <CurrencyInput style={{width:'80%'}} placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
+                                                    <Button style={{width:'20%'}} onClick={handleEnter}><strong>ENTER</strong></Button>
+                                                </Grid>
+                                            </FormControl>
+
+                                    }
+                                    { showResult ? 
+                                        <FormControl style={{width:'70%'}}>
+                                            <Grid direction='column' justifyContent='flex-start' textAlign='left'>
+                                                <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
+                                                <Grid container direction='row' justifyContent='space-between'>
+                                                    <h2>Your Guess: {formatter.format(guessFinal)}</h2>
+                                                    <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
+                                                </Grid>
+                                            </Grid>
+                                        </FormControl> 
+                                    : null}
+                                </Grid>
                             </CardContent>
                         </Card>
                     </Grid>
