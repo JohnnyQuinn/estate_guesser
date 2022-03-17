@@ -127,11 +127,11 @@ function Game() {
                                             indicatorContainerProps={{
                                                 style: {
                                                     width:'37rem',
-                                                    height:'20rem'
+                                                    marginTop:'26rem'
                                                 }
                                             }} 
                                         >
-                                            { homePics.map((i) => <img src={i} object-fit='contain'/>)}
+                                            { homePics.map((i) => <img src={i} style={{width:'100%'}}/>)}
                                         </Carousel>
                                     </Grid>
                                     <Grid xs={4} container direction="column" alignItems="flex-start" justifyContent="space-evenly" textAlign="left">
