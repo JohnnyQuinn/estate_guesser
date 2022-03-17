@@ -120,11 +120,12 @@ function Game() {
             <Container fluid>
                 <Grid container direction="row">
                     <Grid item xs></Grid>
-                    <Grid item xs={10}>
+                    <Grid item xs={11}>
                         <Card height='auto' width='auto'>
                             <CardContent>
-                                <Grid container direction="row" justifyContent="center">
-                                    <Grid container xs fluid justifyContent="center" > 
+                                <Typography variant='h4' textAlign='right' marginBottom={'1%'}>{gamePage}/10</Typography>
+                                <Grid container direction="row" justifyContent="center" rowSpacing={1}>
+                                    <Grid container xs fluid justifyContent="flex-start" > 
                                         <Carousel autoPlay={false}
                                             indicatorContainerProps={{
                                                 style: {
@@ -136,17 +137,24 @@ function Game() {
                                             { homePics.map((i) => <img src={i} style={{width:'100%'}}/>)}
                                         </Carousel>
                                     </Grid>
-                                    <Grid xs={4} container direction="column" alignItems="flex-start" justifyContent="space-evenly" textAlign="left">
-                                        <Typography variant="h4">Location: {location}</Typography>
-                                        <Typography variant="h4">Bed(s): {bed}</Typography>
-                                        <Typography variant="h4">Bath(s): {bath}</Typography>
-                                        <Typography variant="h4">Square Footage: {sq}</Typography>
+                                    <Grid xs={5
+                                    } style={{width:'100%'}}>
+                                        <Grid container direction='column' justifyContent='space-evenly' textAlign="left">
+                                            <Typography variant="h4">Location: {location}</Typography>
+                                            <Typography variant="h4">Bed(s): {bed}</Typography>
+                                            <Typography variant="h4">Bath(s): {bath}</Typography>
+                                            <Typography variant="h4">Square Footage: {sq}</Typography>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                                {showGuess && <FormControl>
-                                    <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                                    <Button onClick={handleSubmit}><strong>ENTER</strong></Button>
-                                </FormControl>}
+                                {showGuess && 
+                                    <Grid container direction='row' justifyContent='flex-start'>
+                                        <FormControl>
+                                            <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
+                                            <Button onClick={handleSubmit}><strong>ENTER</strong></Button>
+                                        </FormControl>
+                                    </Grid>
+                                }
                                 { showResult ? 
                                     <FormControl>
                                         <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
