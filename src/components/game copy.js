@@ -93,8 +93,8 @@ function Game() {
             localStorage.setItem('smallestDiff', guessDiff)
         }
 
-        setShowResult(true)
-        setShowGuess(false)
+        setShowResult(!showResult)
+        setShowGuess(!showGuess)
     }
 
     // > handles when the NEXT button is press and will redirect to the game-over component if the user finishes guessing 10 houses
@@ -105,6 +105,8 @@ function Game() {
             navigate('/game-over')
         } else {
             localStorage.setItem('gamePage', gamePage)
+            setShowResult(!showResult)
+            setShowGuess(!showGuess)
         }
     }
   
@@ -141,10 +143,17 @@ function Game() {
                                         <Typography variant="h4">Square Footage: {sq}</Typography>
                                     </Grid>
                                 </Grid>
-                                <FormControl>
+                                {showGuess && <FormControl>
                                     <CurrencyInput placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
                                     <Button onClick={handleSubmit}><strong>ENTER</strong></Button>
-                                </FormControl>
+                                </FormControl>}
+                                { showResult ? 
+                                    <FormControl>
+                                        <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
+                                        <h2>Your Guess: {formatter.format(guessFinal)}</h2>
+                                        <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
+                                    </FormControl> 
+                                : null}
                             </CardContent>
                         </Card>
                     </Grid>
