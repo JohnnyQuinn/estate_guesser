@@ -15,6 +15,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { InputAdornment } from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
+import { margin } from '@mui/system';
 
 
 function Game() {
@@ -113,16 +114,27 @@ function Game() {
     console.log(`randomHouseIndexes: ${randomHouseIndexes}, typeof: ${typeof(randomHouseIndexes)}`) 
     return (
         <div className="game">
-            <Navbar />
+            <Navbar />  
             <Container fluid>
                 <Grid container direction="row">
-                    <Grid item></Grid>
+                    <Grid item xs></Grid>
                     <Grid item xs={10}>
-                        <Card>
+                        <Card height='auto' width='auto'>
                             <CardContent>
-                                <Grid container direction="row">
-                                    <Grid> {/*insert carousel here */}</Grid>
-                                    <Grid>
+                                <Grid container direction="row" justifyContent="center">
+                                    <Grid container xs fluid justifyContent="center" > 
+                                        <Carousel autoPlay={false}
+                                            indicatorContainerProps={{
+                                                style: {
+                                                    width:'37rem',
+                                                    height:'20rem'
+                                                }
+                                            }} 
+                                        >
+                                            { homePics.map((i) => <img src={i} object-fit='contain'/>)}
+                                        </Carousel>
+                                    </Grid>
+                                    <Grid xs={4} container direction="column" alignItems="flex-start" justifyContent="space-evenly" textAlign="left">
                                         <Typography variant="h4">Location: {location}</Typography>
                                         <Typography variant="h4">Bed(s): {bed}</Typography>
                                         <Typography variant="h4">Bath(s): {bath}</Typography>
@@ -136,7 +148,7 @@ function Game() {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid item></Grid>
+                    <Grid item xs></Grid>
                 </Grid>
             </Container>
         </div>
