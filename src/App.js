@@ -1,21 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route} from 'react-router-dom';
-
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Landing from './components/landing'; 
 import Game from './components/game';
 import GameOver from './components/game-over'
 
+const theme = createTheme({
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: 'white',
+          backgroundColor: '#3D84A8',
+          fontSize: '2rem',
+          fontFamily: 'Baloo 2' 
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#7F7D9D'
+        }
+      }
+    }
+  },
+})
+
 function App() {
   return (
-    <div className="App"> 
-        <Routes>
-          <Route exact path="/" element={<Landing />}/>
-          <Route path="/game" element={<Game/>}/>
-          <Route path="/game-over" element={<GameOver/>}/>
-        </Routes>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <div className="App"> 
+            <Routes>
+              <Route exact path="/" element={<Landing />}/>
+              <Route path="/game" element={<Game/>}/>
+              <Route path="/game-over" element={<GameOver/>}/>
+            </Routes>
+      </div>
+    </ThemeProvider>
+  )
 }
 
 export default App;

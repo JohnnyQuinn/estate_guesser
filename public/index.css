@@ -1,6 +1,7 @@
 h1, h2, h3, h4 {
     font-family: 'Baloo 2', cursive;
     font-weight: 800;
+    color:white; 
 }
 
 p {
@@ -20,11 +21,10 @@ p {
 .brand {
     color: #48466D;
     text-shadow: -4px 4px 0px #46CDCF;
-    font-size: 144px;
 }
 
 #landingBrand {
-
+    font-size: 144px;
 }
 
 #landingSub {
@@ -32,6 +32,7 @@ p {
     color: #1C709A
 }
 
-.Button {
-    color: white; 
+a {
+    text-decoration: none;
+    color: #48466D
 }

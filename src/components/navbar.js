@@ -19,7 +19,7 @@ function NavBar() {
         <div className="navbar">
             <nav style={{width: '100%', marginLeft: '1%'}}>
                 <Grid container flexDirection='row' justifyContent='space-between'>
-                    <Grid>{ RenderBrand() &&  <h1><a href="/">EstateGuesser</a></h1>}</Grid>
+                    <Grid>{ RenderBrand() &&  <h1 className='brand' id='navBrand'><a href="/">EstateGuesser</a></h1>}</Grid>
                     <Grid><Button><QuestionMarkIcon fontSize="large"/></Button></Grid>
                 </Grid>
             </nav>
