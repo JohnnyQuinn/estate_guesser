@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { Card, Container, Row, Col, Button } from 'react-bootstrap';
+import { Card, CardContent, Grid, Button } from '@mui/material'
+import Navbar from './navbar'
+import NavBar from './navbar'
  
 function GameOver() {
     const totalDiff = Number(localStorage.getItem('totalDiff'))
@@ -12,22 +13,21 @@ function GameOver() {
 
     return (
         <div className='gameOver'>
-            <Container fluid>
-                <Row>
-                    <Col></Col>
-                    <Col xs={9}>
-                        <Card border="primary">
-                            <Card.Body>
-                                <Card.Title><h1>Game Over</h1></Card.Title>
-                                <Card.Text><h2>Total difference: {formatter.format(totalDiff)}</h2></Card.Text>
-                                <Card.Text><h2>Smallest difference: {formatter.format(smallestDiff)}</h2></Card.Text>
-                                <Button variant="primary"><Link to="/" style={{ color: "white" }}> HOME </Link></Button>
-                            </Card.Body>
+            <Navbar/>
+            <Grid container direction='row' style={{marginTop:'10%'}}>
+                <Grid item xs></Grid>
+                    <Grid item xs={8}>
+                        <Card style={{paddingTop:'5%', paddingBottom:'5%'}}>
+                            <CardContent>
+                                <h1>Game Over</h1>
+                                <h2>Total difference: {formatter.format(totalDiff)}</h2>
+                                <h2>Smallest difference: {formatter.format(smallestDiff)}</h2>
+                                <Button variant="contained" href='/'>HOME</Button>
+                            </CardContent>
                         </Card>
-                    </Col>
-                    <Col></Col>
-                </Row>
-            </Container>
+                    </Grid>
+                <Grid item xs></Grid>
+            </Grid>
         </div>
     )
 }

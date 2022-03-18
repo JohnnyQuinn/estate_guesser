@@ -1,12 +1,8 @@
-import { Link } from 'react-router-dom';
-// import { Button } from 'react-bootstrap';
-import ReactDOM from 'react-dom';
 import Button from '@mui/material/Button';
 import NavBar from './navbar'
-// import "./Landing.css"
 
 // > populates a list (len = 10) with different random numbers under 80 
-// > this serves as a way for the game to access random indexes in house data json 
+// > this serves as a way for the game to access random indexes in house-data.json 
 function randomizeHouseIndexes() {
     const randomHouseIndexes = []
     const max = 80

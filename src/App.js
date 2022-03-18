@@ -5,6 +5,7 @@ import Landing from './components/landing';
 import Game from './components/game';
 import GameOver from './components/game-over'
 
+// custom CSS override 
 const theme = createTheme({
   components: {
     MuiButton: {
@@ -26,7 +27,9 @@ const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          backgroundColor: '#7F7D9D'
+          backgroundColor: '#7F7D9D',
+          borderRadius: '21px',
+          padding:'0'
         }
       }
     }

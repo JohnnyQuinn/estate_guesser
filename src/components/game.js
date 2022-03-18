@@ -116,7 +116,7 @@ function Game() {
                 <Grid container direction="row">
                     <Grid item xs></Grid>
                     <Grid item xs={11}>
-                        <Card height='auto' width='auto' style={{padding:'0', borderRadius:'21px'}}>
+                        <Card height='auto' width='auto' style={{}}>
                             <CardContent>
                                 <h4 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage}/10</h4>
                                 <Grid container direction="row" justifyContent="center" rowSpacing={1}>
@@ -127,7 +127,8 @@ function Game() {
                                                     width:'37rem',
                                                     marginTop:'26rem'
                                                 }
-                                            }} 
+                                            }}
+                                            fullHeightHover={true}
                                         >
                                             { homePics.map((i) => <img src={i} style={{width:'100%'}}/>)}
                                         </Carousel>
