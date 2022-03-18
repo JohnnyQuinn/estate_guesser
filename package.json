@@ -12,7 +12,6 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
-    "react-bootstrap": "^2.1.1",
     "react-currency-input-field": "^3.6.4",
     "react-dom": "^17.0.2",
     "react-material-ui-carousel": "^3.2.0",
