@@ -16,8 +16,9 @@ p {
     right: 0%;
     top: 0%;
     bottom: 0%;
-
-    background: linear-gradient(112.94deg, rgba(0, 255, 174, 0) -10.46%, rgba(0, 255, 174, 0) 14.22%, #46CDCF 99.69%);}
+  
+    background: linear-gradient(112.94deg, #00FFAE -10.46%, rgba(0, 255, 174, 0.31) -10.44%, #46CDCF 99.69%);
+}
 
 .brand {
     color: #48466D;
@@ -36,4 +37,9 @@ p {
 a {
     text-decoration: none;
     color: #48466D
+}
+
+.App {
+    height: 100%;
+
 }

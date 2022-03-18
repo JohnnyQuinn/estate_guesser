@@ -144,21 +144,21 @@ function Game() {
                                 </Grid>
                                 <Grid container direction='row' justifyContent='flex-start' >
                                     {showGuess && 
-                                            <FormControl style={{width:'76%'}}>
+                                            <FormControl style={{width:'88%'}}>
                                                 <FormLabel style={{width:'40%', textAlign:'left'}}><h2 style={{marginBottom:'0'}}>Guess The Price!</h2></FormLabel>
                                                 <Grid container justifyContent='flex-start' direction='row' style={{height:'40%'}}>
                                                     <CurrencyInput style={{width:'75%', height:'100%', borderRadius:'10px'}} placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                                                    <Button style={{width:'20%', height:'100%', marginLeft:'2%'}} onClick={handleEnter} color='secondary'><strong>ENTER</strong></Button>
+                                                    <Button style={{width:'15%', height:'100%', marginLeft:'2%'}} onClick={handleEnter} color='secondary'><strong>ENTER</strong></Button>
                                                 </Grid>
                                             </FormControl>
                                     }
                                     { showResult ? 
-                                        <FormControl style={{width:'70%'}}>
+                                        <FormControl style={{width:'79%'}}>
                                             <Grid direction='column' justifyContent='flex-start' textAlign='left'>
-                                                <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
-                                                <Grid container direction='row' justifyContent='space-between'>
+                                                <h2 style={{marginBottom:'0'}}>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
+                                                <Grid container direction='row' justifyContent='space-between' style={{height: '35%'}}>
                                                     <h2>Your Guess: {formatter.format(guessFinal)}</h2>
-                                                    <Button variant="contained" type="submit" onClick={handleNext} color='secondary'><strong>NEXT</strong></Button>
+                                                    <Button style={{width:'15%', height:'100%', marginLeft:'2%'}} variant="contained" type="submit" onClick={handleNext} color='secondary'><strong>NEXT</strong></Button>
                                                 </Grid>
                                             </Grid>
                                         </FormControl> 
