@@ -118,14 +118,14 @@ function Game() {
                     <Grid item xs={11}>
                         <Card height='auto' width='auto' style={{}}>
                             <CardContent>
-                                <h4 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage}/10</h4>
+                                <h3 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage}/10</h3>
                                 <Grid container direction="row" justifyContent="center" rowSpacing={1}>
                                     <Grid container xs fluid justifyContent="flex-start" > 
                                         <Carousel autoPlay={false}
                                             indicatorContainerProps={{
                                                 style: {
-                                                    width:'37rem',
-                                                    marginTop:'26rem'
+                                                    width:'40rem',
+                                                    marginTop:'28.5rem'
                                                 }
                                             }}
                                             fullHeightHover={true}
@@ -133,8 +133,7 @@ function Game() {
                                             { homePics.map((i) => <img src={i} style={{width:'100%'}}/>)}
                                         </Carousel>
                                     </Grid>
-                                    <Grid xs={5
-                                    } style={{width:'100%'}}>
+                                    <Grid xs={4} style={{width:'100%'}}>
                                         <Grid container direction='column' justifyContent='space-evenly' textAlign="left">
                                             <h3 variant="h4">Location: <p>{location}</p></h3>
                                             <h3 variant="h4">Bed(s): <p>{bed}</p></h3>

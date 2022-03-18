@@ -29,7 +29,13 @@ const theme = createTheme({
         root: {
           backgroundColor: '#7F7D9D',
           borderRadius: '21px',
-          padding:'0'
+        }
+      }
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          padding:'1% 4% 0% 4%'
         }
       }
     }
