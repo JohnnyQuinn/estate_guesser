@@ -20,9 +20,9 @@ function Game() {
     const [guessFinal, setGuessFinal] = useState(0)
 
     let gamePage = Number(localStorage.getItem('gamePage'))
-    let randomHouseIndexes = localStorage.getItem('randomHouseIndexes')
+    // let randomHouseIndexes = localStorage.getItem('randomHouseIndexes')
     // hardcoded for demo purposes
-    // let randomHouseIndexes = [ 1, 58, 37, 19, 69, 42, 24, 46, 59, 8]
+    let randomHouseIndexes = [ 1, 58, 37, 19, 69, 42, 24, 46, 59, 8]
     let totalDiff = Number(localStorage.getItem('totalDiff'))
     let smallestDiff = Number(localStorage.getItem('smallestDiff'))
 
@@ -102,7 +102,7 @@ function Game() {
         }
     }
   
-    formatHouseIndex()
+    // formatHouseIndex()
     setCurrData()
     console.log(`gamePage: ${gamePage}, typeof: ${typeof(gamePage)}`)
     console.log(`randomHouseIndexes: ${randomHouseIndexes}, typeof: ${typeof(randomHouseIndexes)}`) 
