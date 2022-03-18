@@ -1,22 +1,16 @@
 import React, { useState } from 'react';
-// import { Card, Container, Row, Col, Carousel, Form, Button} from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
 import HomeData from "../home-data/home-data.json"
 import CurrencyInput from 'react-currency-input-field';
 import Navbar from './navbar'
 import Button from '@mui/material/Button';
 import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Container from '@mui/material/Container'
 import CardContent from '@mui/material/CardContent';
-import h4 from '@mui/material/Typography';
 import { FormLabel, InputAdornment } from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
-import { margin } from '@mui/system';
-
 
 function Game() {
     const navigate = useNavigate()
@@ -41,7 +35,7 @@ function Game() {
     // formats numbers to USD
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
-        currency: 'USD'
+        currency: 'USD',
     })
     // set first img to same size as others
     const cardImgStyle = {
@@ -122,7 +116,7 @@ function Game() {
                 <Grid container direction="row">
                     <Grid item xs></Grid>
                     <Grid item xs={11}>
-                        <Card height='auto' width='auto'>
+                        <Card height='auto' width='auto' style={{padding:'0', borderRadius:'21px'}}>
                             <CardContent>
                                 <h4 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage}/10</h4>
                                 <Grid container direction="row" justifyContent="center" rowSpacing={1}>
@@ -141,20 +135,20 @@ function Game() {
                                     <Grid xs={5
                                     } style={{width:'100%'}}>
                                         <Grid container direction='column' justifyContent='space-evenly' textAlign="left">
-                                            <h4 variant="h4">Location: <p>{location}</p></h4>
-                                            <h4 variant="h4">Bed(s): <p>{bed}</p></h4>
-                                            <h4 variant="h4">Bath(s): <p>{bath}</p></h4>
-                                            <h4 variant="h4">Square Footage: <p>{sq}</p></h4>
+                                            <h3 variant="h4">Location: <p>{location}</p></h3>
+                                            <h3 variant="h4">Bed(s): <p>{bed}</p></h3>
+                                            <h3 variant="h4">Bath(s): <p>{bath}</p></h3>
+                                            <h3 variant="h4">Square Footage: <p>{sq}</p></h3>
                                         </Grid>
                                     </Grid>
                                 </Grid>
                                 <Grid container direction='row' justifyContent='flex-start' >
                                     {showGuess && 
-                                            <FormControl style={{width:'72%'}}>
-                                                <FormLabel style={{width:'30%'}}><h3>Guess The Price!</h3></FormLabel>
-                                                <Grid justifyContent='flex-start' direction='row'>
-                                                    <CurrencyInput style={{width:'80%'}} placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
-                                                    <Button style={{width:'20%'}} onClick={handleEnter}><strong>ENTER</strong></Button>
+                                            <FormControl style={{width:'76%'}}>
+                                                <FormLabel style={{width:'40%', textAlign:'left'}}><h2 style={{marginBottom:'0'}}>Guess The Price!</h2></FormLabel>
+                                                <Grid container justifyContent='flex-start' direction='row' style={{height:'40%'}}>
+                                                    <CurrencyInput style={{width:'75%', height:'100%', borderRadius:'10px'}} placeholder="$ ..." prefix="$" onChange={event => setGuessInput(event.target.value)}></CurrencyInput>
+                                                    <Button style={{width:'20%', height:'100%', marginLeft:'2%'}} onClick={handleEnter} color='secondary'><strong>ENTER</strong></Button>
                                                 </Grid>
                                             </FormControl>
                                     }
@@ -164,7 +158,7 @@ function Game() {
                                                 <h2>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
                                                 <Grid container direction='row' justifyContent='space-between'>
                                                     <h2>Your Guess: {formatter.format(guessFinal)}</h2>
-                                                    <Button variant="primary" type="submit" onClick={handleNext}><strong>NEXT</strong></Button>
+                                                    <Button variant="contained" type="submit" onClick={handleNext} color='secondary'><strong>NEXT</strong></Button>
                                                 </Grid>
                                             </Grid>
                                         </FormControl> 

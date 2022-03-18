@@ -16,6 +16,12 @@ const theme = createTheme({
           fontFamily: 'Baloo 2' 
         },
       },
+      variants: [{
+        props: {color: 'secondary'},
+        style: {
+          backgroundColor: '#48466D'
+        }
+      }]
     },
     MuiCard: {
       styleOverrides: {
