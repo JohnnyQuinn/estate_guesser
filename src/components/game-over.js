@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, CardContent, Grid, Button } from '@mui/material'
 import Navbar from './navbar'
-import NavBar from './navbar'
  
 function GameOver() {
     const totalDiff = Number(localStorage.getItem('totalDiff'))

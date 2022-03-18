@@ -9,7 +9,7 @@ import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import Container from '@mui/material/Container'
 import CardContent from '@mui/material/CardContent';
-import { FormLabel, InputAdornment } from '@mui/material';
+import { FormLabel} from '@mui/material';
 import Carousel from 'react-material-ui-carousel'
 
 function Game() {
@@ -39,12 +39,6 @@ function Game() {
         style: 'currency',
         currency: 'USD',
     })
-    // set first img to same size as others
-    const cardImgStyle = {
-        width: '576px', 
-        height: '432px'
-    }
-
     // since localStorage only stores strings the data from localStorage needs to be converted from 
     // string to an array
     function formatHouseIndex() { 
