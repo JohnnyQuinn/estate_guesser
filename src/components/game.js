@@ -21,6 +21,8 @@ function Game() {
 
     let gamePage = Number(localStorage.getItem('gamePage'))
     let randomHouseIndexes = localStorage.getItem('randomHouseIndexes')
+    // hardcoded for demo purposes
+    // let randomHouseIndexes = [ 1, 58, 37, 19, 69, 42, 24, 46, 59, 8]
     let totalDiff = Number(localStorage.getItem('totalDiff'))
     let smallestDiff = Number(localStorage.getItem('smallestDiff'))
 
@@ -62,6 +64,7 @@ function Game() {
         const index = randomHouseIndexes[gamePage]
         console.log(`index: ${index}`)
         price = Number(HomeData[index]["price"]);
+        console.log(`Price: ${price}`)
         homePics = HomeData[index]["homePics"]
         location = HomeData[index]['location']
         bed = HomeData[index]['bed']
@@ -118,14 +121,14 @@ function Game() {
                     <Grid item xs={11}>
                         <Card height='auto' width='auto' style={{}}>
                             <CardContent>
-                                <h3 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage}/10</h3>
+                                <h3 style={{textAlign:'left', marginBottom:'1%'}}>{gamePage + 1}/10</h3>
                                 <Grid container direction="row" justifyContent="center" rowSpacing={1}>
-                                    <Grid container xs fluid justifyContent="flex-start" > 
+                                    <Grid container xs fluid justifyContent="flex-start"> 
                                         <Carousel autoPlay={false}
                                             indicatorContainerProps={{
                                                 style: {
                                                     width:'40rem',
-                                                    marginTop:'28.5rem'
+                                                    /*marginTop:'72%'*/
                                                 }
                                             }}
                                             fullHeightHover={true}
@@ -155,7 +158,7 @@ function Game() {
                                     { showResult ? 
                                         <FormControl style={{width:'79%'}}>
                                             <Grid direction='column' justifyContent='flex-start' textAlign='left'>
-                                                <h2 style={{marginBottom:'0'}}>Actual Price: {formatter.format(HomeData[gamePage]["price"])}</h2>
+                                                <h2 style={{marginBottom:'0'}}>Actual Price: {formatter.format(price)}</h2>
                                                 <Grid container direction='row' justifyContent='space-between' style={{height: '35%'}}>
                                                     <h2>Your Guess: {formatter.format(guessFinal)}</h2>
                                                     <Button style={{width:'15%', height:'100%', marginLeft:'2%'}} variant="contained" type="submit" onClick={handleNext} color='secondary'><strong>NEXT</strong></Button>
